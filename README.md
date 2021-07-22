@@ -30,8 +30,6 @@ Glass is an megassing application where you can search for and connect with othe
 
 [Component Tree](https://whimsical.com/glass-tree-WpDcwsFnGZh16xJhu1Sy5y)
 
-[Component Architecture](https://whimsical.com/glass-3WWJFRTsVrgdbwtfNKc84r)
-
 ### File Structure
 ``` structure
 
