@@ -26,15 +26,9 @@
 
 ### Client (Front End)
 
-#### Wireframes
-
 [Figma for Glass](https://www.figma.com/file/5QyWcwG4sbbL4DShqquetc/Untitled?node-id=0%3A1)
 
-#### Component Tree
-
 [Component Tree](https://whimsical.com/glass-tree-WpDcwsFnGZh16xJhu1Sy5y)
-
-#### Component Architecture
 
 [Component Architecture](https://whimsical.com/glass-3WWJFRTsVrgdbwtfNKc84r)
 
