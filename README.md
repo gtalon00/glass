@@ -2,13 +2,13 @@
 <br>
 
 ## MVP
-
+Glass is an megassing application where you can search for and connect with other users to chat with. Have multiple chat rooms with different users with appeasing visuals and clean functionality. Be able to set a profile picture, look at your list of contacts, and view your current messages. With glass you can edit and delete any sent messages, typos and missclicking be annoying so let's make them an ease to fix!   
 <br>
 
 ### Goals
 
 - _Glassy look to the application._
-- _._
+- _Easy to navigate UI._
 - _._
 - _._
 - _._
@@ -82,8 +82,6 @@ src
 
 ### Server (Back End)
 
-#### ERD Model
-
 [ERD](https://app.diagrams.net/)
 <br>
 
@@ -92,10 +90,9 @@ src
 ## Post-MVP
 
 - _Websockets._
-- _._
-- _._
-- _._
-- _._
+- _Light / Dark mode._
+- _User Bio._
+- _Group Chats._
 
 ***
 
