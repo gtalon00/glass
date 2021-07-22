@@ -3,8 +3,6 @@
 
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
 <br>
 
 ### Goals
@@ -19,8 +17,6 @@
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | _Create a functioning front._ |
@@ -32,7 +28,7 @@
 
 #### Wireframes
 
-![Figma for Glass](https://www.figma.com/file/5QyWcwG4sbbL4DShqquetc/Untitled?node-id=0%3A1)
+[Figma for Glass](https://www.figma.com/file/5QyWcwG4sbbL4DShqquetc/Untitled?node-id=0%3A1)
 
 #### Component Tree
 
@@ -40,7 +36,7 @@
 
 #### Component Architecture
 
-![Component Architecture](https://whimsical.com/glass-3WWJFRTsVrgdbwtfNKc84r)
+[Component Architecture](https://whimsical.com/glass-3WWJFRTsVrgdbwtfNKc84r)
 
 ### File Structure
 ``` structure
@@ -63,8 +59,6 @@ src
 ```
 
 #### Time Estimates
-
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
@@ -97,9 +91,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
-
-![ERD](https://app.diagrams.net/)
+[ERD](https://app.diagrams.net/)
 <br>
 
 ***
