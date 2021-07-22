@@ -19,8 +19,9 @@ Glass is an megassing application where you can search for and connect with othe
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Create a functioning front._ |
-|   React Router   | _Linking pages together._ |
+|      React       | _JavaScript library for building user interfaces._ |
+|   React Router   | _It enables the navigation among views of various components in a React Application._ |
+|   Axios   | _Making and Exicuting HTTP request._ |
 
 <br>
 
