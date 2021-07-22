@@ -59,7 +59,6 @@ src
 | Proposal    |    L     |     1.5 hrs      |     TBD     |    3 hrs    |
 | Pseudo Code |    H     |     .5 hrs      |     TBD     |     TBD     |
 | Back End |    H     |     4.5 hrs      |     TBD     |     TBD     |
-
 | Create React App |    H     |     .5 hrs      |     TBD     |     TBD     |
 | Room.jsx Functionality |    H     |     3 hrs      |     TBD     |     TBD     |
 | Message.jsx Functionality|    H     |     3 hrs      |     TBD     |     TBD     |
