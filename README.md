@@ -1,8 +1,8 @@
 # glass
 <br>
 
-## MVP
-Glass is an megassing application where you can search for and connect with other users to chat with. Have multiple chat rooms with different users with appeasing visuals and clean functionality. Be able to set a profile picture, look at your list of contacts, and view your current messages. With glass you can edit and delete any sent messages, typos and missclicking be annoying so let's make them an ease to fix!   
+## MVP / What is Glass
+Glass is an megassing application where you can search for and connect with other users to chat with. Have multiple chat rooms with different users with appeasing visuals and clean functionality. Be able to set a profile picture, look at your list of contacts, and view your current messages. With Glass you can edit and delete any sent messages, typos and mis-clicking be annoying so let's make them an ease to fix!
 <br>
 
 ### Goals
