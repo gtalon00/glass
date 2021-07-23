@@ -2,6 +2,7 @@ class MessagesController < ApplicationController
   before_action :set_message, only: [:update, :destroy]
   before_action :authorize_request
   # GET /messages
+  
   def index
     @messages = Message.where(room_id: params[:id])
     @room = Room.find(params[:id])
