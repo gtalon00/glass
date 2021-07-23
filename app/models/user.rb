@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
   has_many :messages
-  # has_and_belongs_to_many :rooms
+  has_many :users_rooms
+  has_many :rooms, through: :users_rooms
 
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true

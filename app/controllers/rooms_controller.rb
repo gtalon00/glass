@@ -1,22 +1,22 @@
 class RoomsController < ApplicationController
-  before_action :set_room, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: :index
 
   # GET /rooms
   def index
-    @rooms = Room.all
+    @rooms = Room.where(user_id: @current_user.id)
 
     render json: @rooms
   end
 
   # GET /rooms/1
-  def show
-    render json: @room
-  end
+  # def show
+  #   render json: @room
+  # end
 
   # POST /rooms
   def create
     @room = Room.new(room_params)
-
+    
     if @room.save
       render json: @room, status: :created
     else
@@ -34,15 +34,13 @@ class RoomsController < ApplicationController
   # end
 
   # DELETE /rooms/1
-  # def destroy
-  #   @room.destroy
-  # end
+  def destroy
+    @room = Room.where(user_id: @current_user.id)
+    @room.destroy
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_room
-      @room = Room.find(params[:id])
-    end
 
     # Only allow a list of trusted parameters through.
     def room_params

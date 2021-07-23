@@ -1,11 +1,13 @@
 class MessagesController < ApplicationController
-  before_action :set_message, only: [:show, :update, :destroy]
-
+  before_action :set_message, only: [:update, :destroy]
+  before_action :authorize_request
   # GET /messages
   def index
-    @messages = Message.all
-
+    @messages = Message.where(room_id: params[:id])
+    @room = Room.find(params[:id])
+    if @room.includes(@current_user)
     render json: @messages
+  end
   end
 
   # GET /messages/1
@@ -15,8 +17,10 @@ class MessagesController < ApplicationController
 
   # POST /messages
   def create
+    @room = Room.find(params[:id])
     @message = Message.new(message_params)
-
+    @message.user = @current_user
+    @room.messages = @message
     if @message.save
       render json: @message, status: :created
     else
@@ -26,16 +30,20 @@ class MessagesController < ApplicationController
 
   # PATCH/PUT /messages/1
   def update
-    if @message.update(message_params)
-      render json: @message
-    else
-      render json: @message.errors, status: :unprocessable_entity
+    if @current_user.messages.includes(@message)
+      if @message.update(message_params)
+        render json: @message
+      else
+        render json: @message.errors, status: :unprocessable_entity
+      end
     end
-  end
+  end  
 
   # DELETE /messages/1
   def destroy
+    if @current_user.messages.includes(@message)
     @message.destroy
+    end
   end
 
   private
