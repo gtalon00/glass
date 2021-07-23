@@ -6,10 +6,6 @@ Rails.application.routes.draw do
   post '/room/:room_id/messages', to: 'messages#create'
   resources :users, except: :show
 
-
-  #List of users
-  # get '/users', to to: 'users#index'
-
   # Auth
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'

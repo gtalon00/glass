@@ -10,11 +10,6 @@ class MessagesController < ApplicationController
   end
   end
 
-  # GET /messages/1
-  # def show
-  #   render json: @message
-  # end
-
   # POST /messages
   def create
     @room = Room.find(params[:id])
