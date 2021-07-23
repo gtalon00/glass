@@ -55,10 +55,7 @@ export default function Register(props) {
       <button>Submit</button>
       <br />
       <br />
-      <Link to="/login">Have an Account? Log in Here</Link>
-      <br />
-      <br />
-      <Link to="/">home for dev purposes</Link>
+      <h4>Have an Account? <Link to="/login">Log in Here</Link></h4>
     </form>
   );
 }

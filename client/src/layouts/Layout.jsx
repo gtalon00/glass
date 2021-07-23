@@ -1,15 +1,17 @@
 import React from 'react'
 import '../assets/CSS/Layout.css'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 
 export default function Layout(props) {
-
+const { currentUser } = props
 
   return (
     <div className='parent-of-props'> 
-  <h3>This will be Header</h3>    
-      <div className='children-of-props'>{props.children}</div>
-  <h3>This will be Footer</h3>    
+      <Header />
+      {props.children}
+      <Footer currentUser={currentUser}/>
     </div>
   )
 }

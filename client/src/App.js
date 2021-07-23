@@ -11,6 +11,14 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const history = useHistory();
 
+  useEffect(() => {
+    const handleVerify = async () => {
+      const userData = await verifyUser();
+      setCurrentUser(userData);
+    };
+    handleVerify();
+  }, []);
+
   const handleRegister = async (formData) => {
     const userData = await registerUser(formData);
     setCurrentUser(userData);
@@ -24,7 +32,7 @@ function App() {
   };
   return (
     <div className="App">
-      <Layout>
+      <Layout currentUser={currentUser}>
         <Switch>
 
           <Route path='/register'>

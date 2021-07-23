@@ -13,7 +13,7 @@ export default function Flavors(props) {
       {listOfUsers &&
         listOfUsers.map((user) => (
           <div key={user.id}>
-              {/* <img src={user.profile_pic} alt='Profle Picture'/> */}
+              <img src={user.profile_pic} alt='Profle Picture'/>
             <p>{user.username}</p>
           </div>
         ))}

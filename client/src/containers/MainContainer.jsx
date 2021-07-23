@@ -2,13 +2,17 @@ import { useEffect, useState } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 import { getAllRooms } from "../services/rooms"
 import { deleteUser, getAllUsers, putUsers } from "../services/users";
+import { deleteMessage, getAllMessages, putMessages } from "../services/messages";
 import Landing from '../screens/Landing'
 import Users from '../screens/Users'
+import Rooms from '../screens/Rooms'
+import Messages from "../screens/Messages";
 
 
-export default function MainContainer() {
+export default function MainContainer({currentUser}) {
   const [listOfUsers, setListOfUsers] = useState([]);
   const [listOfRooms, setListOfRooms] = useState([]);
+  const [listOfMessages, setListOfMessages] = useState([]);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -19,9 +23,13 @@ export default function MainContainer() {
       const roomData = await getAllRooms();
       setListOfRooms(roomData);
     };
-    
+    const fetchMessages = async () => {
+      const messageData = await getAllMessages();
+      setListOfMessages(messageData);
+    };
+    fetchRooms()
+    fetchMessages();
     fetchUsers();
-    fetchRooms();
   }, []);
 
   return (
@@ -30,15 +38,17 @@ export default function MainContainer() {
         <Users listOfUsers={listOfUsers} />
     </Route>
       
+    <Route path="/rooms/:id/messages">
+      <Messages />
+    </Route>
+
+    <Route path="/rooms">
+        <Rooms listOfRooms={listOfRooms}/>
+    </Route>
+      
     <Route path='/'>
         <Landing />
     </Route>
-    {/* <Route path="/foods/:id/edit">
-      <FoodEdit foodList={foodList} handleUpdate={handleUpdate} />
-    </Route> */}
-    {/* <Route path="/foods/:id">
-      <FoodDetail flavorList={flavorList} />
-    </Route> */}
     {/* <Route path="/foods/new">
       <FoodCreate handleCreate={handleCreate} />
     </Route> */}

@@ -49,10 +49,10 @@ export default function Login(props) {
       <button>Submit</button>
       <br />
       <br />
-      <Link to="/register">Don't Have an Account? Register Here</Link>
+      <h4>Don't Have an Account?<Link to="/register"> Register Here</Link></h4>
       <br />
       <br />
-      <Link to="/">home for dev purposes</Link>
+
     </form>
   );
 }
