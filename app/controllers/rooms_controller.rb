@@ -25,18 +25,18 @@ class RoomsController < ApplicationController
   end
 
   # PATCH/PUT /rooms/1
-  def update
-    if @room.update(room_params)
-      render json: @room
-    else
-      render json: @room.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @room.update(room_params)
+  #     render json: @room
+  #   else
+  #     render json: @room.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /rooms/1
-  def destroy
-    @room.destroy
-  end
+  # def destroy
+  #   @room.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -9,9 +9,9 @@ class MessagesController < ApplicationController
   end
 
   # GET /messages/1
-  def show
-    render json: @message
-  end
+  # def show
+  #   render json: @message
+  # end
 
   # POST /messages
   def create
