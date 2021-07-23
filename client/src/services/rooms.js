@@ -1,4 +1,4 @@
-import axios from "axios"
+import api from './api-config'
 
 export const getAllRooms = async () => {
   const resp = await api.get(`/rooms`)
