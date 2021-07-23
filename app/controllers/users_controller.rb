@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
 
-    render json: @users
+    render json: @users.map { |user| user.attributes.except('password_digest') }
   end
 
   # POST /users

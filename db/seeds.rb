@@ -1,6 +1,6 @@
-User.destroy_all
-Room.destroy_all
 Message.destroy_all
+Room.destroy_all
+User.destroy_all
 
 @donny = User.create!(username: 'DonnyE', email: 'email@email.com', password: '123456', profile_pic: 'https://ca.slack-edge.com/T0351JZQ0-U01UBRS5VFW-5ef35a002c46-72')
 @maggie = User.create!(username: 'Maggs', email: 'mail@email.com', password: '654321', profile_pic: 'https://ca.slack-edge.com/T0351JZQ0-U01UBRS5VFW-5ef35a002c46-72')

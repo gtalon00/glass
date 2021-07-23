@@ -1,5 +1,4 @@
 class Room < ApplicationRecord
-  has_many :messages
-  has_many :users_rooms
-  has_many :users, through: :users_rooms
+  has_many :messages, dependent: :destroy
+  has_and_belongs_to_many :users
 end
