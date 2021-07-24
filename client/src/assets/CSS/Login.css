@@ -1,0 +1,11 @@
+.stripe {
+  background: orange;
+  height: 40px;
+  width: 150%;
+  position: absolute;
+  top: 200px;
+  right: 10px;
+  transform: rotate(-20deg);
+  /* transform: rotate(1deg); */
+  z-index: -1;
+}
