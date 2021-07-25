@@ -19,44 +19,50 @@ export default function Login(props) {
   };
 
   return (
-    <div >
-      <div className='stripe'></div>
-    <form
+    <div className='login-parent'>
+      <div className='login-glass-card'>
+        <h3 className='login-title'>Login:</h3>
+        <form
+          className='login-form'
       onSubmit={(e) => {
         e.preventDefault();
         handleLogin(formData);
       }}
-    >
-      <h3>Login</h3>
-      <label>
-        Username:
-        <input
+        >
+          <div className='login-form-content'>
+      <label className='login-label-username'>
+            Username:
+            <br/>
+            <input
+          className='login-username'
           type="text"
           name="username"
           value={username}
           onChange={handleChange}
-        />
+          />
       </label>
       <br />
-      <label>
-        Password:
-        <input
+      <label className='login-label-password'>
+            Password:
+            <br/>
+            <input
+          className='login-password'
           type="password"
           name="password"
           value={password}
           onChange={handleChange}
-        />
+          />
       </label>
       <br />
-      <br />
-      <button>Submit</button>
-      <br />
-      <br />
-      <h4>Don't Have an Account?<Link to="/register"> Register Here</Link></h4>
-      <br />
-      <br />
+          </div>
+      <button className='login-btn' >Sign in</button>
+
+          <div className='login-redirect-container'>
+      <h4 className='login-redirect-to-register'>Don't Have an Account?<Link to="/register"> Register Here</Link></h4>
+          </div>
 
       </form>
+          </div>
       </div>
   );
 }

@@ -1,7 +1,7 @@
 .landing-parent {
-  padding-top: .0156px;
+  /* padding-top: .0156px; */
   background-color: #3c415cf1;
-  height: 775px;
+  height: 812px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,7 @@
   backdrop-filter: blur(5px);
 }
 
-.lading-background-text {
+.landing-background-text {
   overflow: hidden;
   font-size: 20rem;
   position: absolute;
@@ -33,7 +33,16 @@
   z-index: -2;
 }
 
-.lading-intro {
+.landing-text {
+  /* background-color: wheat; */
+  height: 75%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  /* margin-bottom: 5%; */
+}
+
+.landing-intro {
   font-family: 'Raleway', sans-serif;
   margin: 0px;
   /* position: absolute; */
@@ -66,4 +75,34 @@
   font-size: 43px;
   margin-top: -10px;
 
+}
+
+.landing-links {
+  /* margin-top: 100px; */
+  /* background-color: wheat; */
+  /* position: absolute;
+  top: 80%; */
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 15%;
+}
+
+.landing-login-btn {
+  width: 200px;
+  height: 48px;
+  border-radius: 40px;
+  border: 0px;
+  /* position: absolute;
+  top: 80%; */
+}
+
+.landing-register-btn {
+  width: 200px;
+  height: 48px;
+  border-radius: 40px;
+  border: 0px;
+  /* position: absolute;
+  top: 80%; */
 }
