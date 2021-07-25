@@ -21,7 +21,7 @@ export default function Login(props) {
   return (
     <div className='login-parent'>
       <div className='login-glass-card'>
-        <h3 className='login-title'>Login:</h3>
+        <h3 className='login-title'>Login Here:</h3>
         <form
           className='login-form'
       onSubmit={(e) => {
@@ -58,7 +58,7 @@ export default function Login(props) {
       <button className='login-btn' >Sign in</button>
 
           <div className='login-redirect-container'>
-      <h4 className='login-redirect-to-register'>Don't Have an Account?<Link to="/register"> Register Here</Link></h4>
+      <h4 className='login-redirect-content'>Don't Have an Account?<Link to="/register"> Register Here</Link></h4>
           </div>
 
       </form>

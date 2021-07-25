@@ -1,11 +1,11 @@
-.login-parent {
+.register-parent {
   background-color: #3c415cf1;
   height: 812px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.login-glass-card {
+.register-glass-card {
   width: 95%;
   height: 95%;
   box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
@@ -21,13 +21,13 @@
   backdrop-filter: blur(5px);
 }
 
-.login-title{
+.register-title{
   color: white;
   font-size: 2rem;
   padding-top: 2%;
 }
 
-.login-form{
+.register-form{
   color: white;
   margin-top: 2%;
   display: flex;
@@ -40,21 +40,21 @@
   /* padding: 1%; */
 }
 
-.login-form-content {
+.register-form-content {
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-content: center;
   /* background-color: violet; */
   width: 90%;
   height: 85%;
 }
 
-.login-label-username {
+.register-label-username {
   padding-top: 10%;
   /* background-color: rosybrown; */
 }
 
-.login-username {
+.register-username {
   width: 260px;
   height: 48px;
   margin-top: 5%;
@@ -62,7 +62,7 @@
   border: 0px;
 }
 
-.login-password {
+.register-email {
   width: 260px;
   height: 48px;
   margin-top: 5%;
@@ -70,7 +70,15 @@
   border: 0px;
 }
 
-.login-redirect-container {
+.register-password {
+  width: 260px;
+  height: 48px;
+  margin-top: 5%;
+  border-radius: 40px;
+  border: 0px;
+}
+
+.register-redirect-container {
   background-color: rgba(124, 124, 124, 0.5);
   height: 15%;
   width: 100%;
@@ -80,11 +88,11 @@
   align-items: center;
 }
 
-.login-redirect-content{
+.register-redirect-content{
   font-size: .9rem;
 }
 
-.login-btn{
+.register-btn{
   width: 200px;
   height: 48px;
   border-radius: 40px;
