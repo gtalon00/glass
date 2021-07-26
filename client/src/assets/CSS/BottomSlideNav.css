@@ -5,6 +5,12 @@
   width: 100%;
   height: 300px;
   justify-self: flex-end;
+  z-index: 6;
+  transform: translateY(495px);
+}
+
+.bsn-revealed {
+  transform: translateY(256px);
 }
 
 .bsn-top {
@@ -33,5 +39,13 @@
 .bsn-bottom {
   width: 100%;
   height: 80%;
+  display: flex;
+  justify-content: center;
   /* background-color: rgb(91, 78, 54); */
+}
+
+.bsn-links {
+  text-decoration: none;
+
+  color: white;
 }

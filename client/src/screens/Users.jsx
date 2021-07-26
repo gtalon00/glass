@@ -29,6 +29,7 @@ export default function Flavors(props) {
         ))}
         </div>
       </div>
+      <div className='users-bsn-placholder'></div>
       <BottomSlideNav currentUser={currentUser} />
     </div>
   );

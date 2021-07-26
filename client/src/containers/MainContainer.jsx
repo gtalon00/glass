@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 import { getAllRooms } from "../services/rooms"
 import { deleteUser, getAllUsers, putUsers } from "../services/users";
-import { deleteMessage, getAllMessages, putMessages } from "../services/messages";
+import { deleteMessage, getAllMessages, putMessage } from "../services/messages";
 import Landing from '../screens/Landing'
 import Users from '../screens/Users'
 import Rooms from '../screens/Rooms'
 import Messages from "../screens/Messages";
-
 
 export default function MainContainer({currentUser}) {
   const [listOfUsers, setListOfUsers] = useState([]);
@@ -19,18 +18,30 @@ export default function MainContainer({currentUser}) {
       const userData = await getAllUsers();
       setListOfUsers(userData);
     };
-    // const fetchRooms = async () => {
-    //   const roomData = await getAllRooms();
-    //   setListOfRooms(roomData);
-    // };
-    // const fetchMessages = async () => {
-    //   const messageData = await getAllMessages();
-    //   setListOfMessages(messageData);
-    // };
-    // fetchRooms()
-    fetchUsers();
-    // fetchMessages();
-  }, []);
+    const fetchRooms = async () => {
+      const roomData = await getAllRooms();
+      setListOfRooms(roomData);
+    };
+    const fetchMessages = async () => {
+      const messageData = await getAllMessages();
+      setListOfMessages(messageData);
+    };
+    if (currentUser) {
+      fetchRooms()
+      fetchUsers();
+      fetchMessages();
+    }
+  }, [currentUser]);
+
+  const handleUpdate = async (id, formData) => {
+    const messageData = await putMessage(id, formData);
+    setListOfMessages((prevState) =>
+      prevState.map((food) => {
+        return food.id === parseInt(id) ? messageData : food;
+      })
+    );
+    // history.push("/foods");
+  };
 
   return (
     <Switch>
@@ -39,7 +50,7 @@ export default function MainContainer({currentUser}) {
     </Route>
       
     <Route path="/rooms/:id/messages">
-      <Messages />
+        <Messages listOfMessages={listOfMessages} currentUser={currentUser}/>
     </Route>
 
     <Route path="/rooms">

@@ -1,29 +1,32 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom";
 
 export default function Rooms({ listOfRooms, currentUser }) {
-  const [chatList, setChatList] = useState();
+  const [chatList, setChatList] = useState([]);
 
   useEffect(() => {
-    // const extractUsers = () => {
+    const extractUsers = () => {
       const users = listOfRooms.map((room) => {
-        return room.users.filter(user => user.id !== currentUser.id)
-        // console.log(room.users)
+        return {id: room.id, user: room.users.find(user => user.id !== currentUser.id)}
       })
-      console.log(users)
-    // }
-    // extractUsers()
-  }, [])
+      setChatList(users)
+    }
+    if (listOfRooms.length && currentUser) {
+      extractUsers()
+    }
+  }, [listOfRooms, currentUser])
 
   return (
     <div>
         <h3>Rooms</h3>
-      {/* {chatList &&
-          chatList.map((chat) => (
-        <p>{chat[0].username}</p>
+      {chatList.map((chat) => (
+        <Link to={`/rooms/${chat.id}/messages`}>
+        <div key={chat.id}>
+        <img src={chat.user.profile_pic} />
+        <p>{chat.user.username}</p>
+        </div>
+        </Link>
         ))}
-          <div key={chat.id}>
-            
-          </div> */}
     </div> 
   )
 }

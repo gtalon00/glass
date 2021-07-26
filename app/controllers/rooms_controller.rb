@@ -3,9 +3,9 @@ class RoomsController < ApplicationController
 
   # GET /rooms
   def index
-    # @rooms = @current_user.rooms
+    @rooms = @current_user.rooms
 
-    @rooms = Room.joins(:users).where(users: {id: @current_user.id})
+    # @rooms = Room.joins(:users).where(users: {id: @current_user.id})
     # .joins(:users).group('rooms.id')
     # .select('rooms.*, COUNT(users.id) as user_count').group('rooms.id')
     #  .where(user_id: @current_user.id);

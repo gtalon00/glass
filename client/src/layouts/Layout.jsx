@@ -11,7 +11,7 @@ const { currentUser } = props
     <div className='parent-of-props'> 
       {/* <Header /> */}
       {props.children}
-      <Footer currentUser={currentUser}/>
+      {/* <Footer currentUser={currentUser}/> */}
     </div>
   )
 }
