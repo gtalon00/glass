@@ -25,16 +25,18 @@ export default function Messages({
     <div className='msg-parent'>
       <div className='msg-glass-card'>
         <div className='msg-gap'>
-          
+
         </div>
         <div className='msg-list'>
       {listOfMessages.map(messages => {
         return <div className='msg-instance' key={messages.id}>
           <div className='msg-user-conatiner'>
           <div className='msg-user'>
-          <img className='msg-user-pic' src={messages.user.profile_pic} alt='' />
+              <img className='msg-user-pic' src={messages.user.profile_pic} alt='' />
+          <div className='msg-headers'>
           <p className='msg-user-username'>{messages.user.username}</p>
           {/* <p className='msg-user-timestamp'>{messages.created_at}</p> */}
+          </div>
           </div>
           </div>
           <br />

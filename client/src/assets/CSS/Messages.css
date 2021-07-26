@@ -1,5 +1,5 @@
 .msg-parent {
-  background-color: #3c415cf1;
+  background-color: rgba(60, 65, 92, .92);
   height: 812px;
   display: flex;
   flex-flow: column;
@@ -12,8 +12,28 @@
   height: 90%;
   box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
   border-radius: 55px;
-  background-color: rgb(255, 255, 255, 0.1);
-  /* background: linear-gradient(#2396bf, #0d5b77 40%, #004961 3%, #004961);; */
+  /* background-color: rgb(255, 255, 255, 0.1); */
+  /* background-color: #ffffff00; */
+  /* background-image: 
+  linear-gradient(315deg, 
+  #ffffff0a 0%, 
+  #ffffff1c 20%, 
+  #ffffff1c 30%, 
+  #ffffff25 40%, 
+  #ffffff1e 50%, 
+  #ffffff1f 60%, 
+  #cfcfcf57 70%, 
+  #cfcfcf79 80%, 
+  #cfcfcf96 90%, 
+  #aaaaaa9f 100%); */
+  background-image: 
+  linear-gradient(140deg, 
+  rgba(255, 255, 255, .31) 0%,  
+  rgba(255, 255, 255, .18) 20%,  
+  rgba(255, 255, 255, .10) 40%,  
+  rgba(255, 255, 255, .09) 60%,  
+  rgba(255, 255, 255, .16) 80%,  
+  rgba(255, 255, 255, .31) 100%);
   overflow: hidden;
   display: flex;
   flex-flow: column;
@@ -54,11 +74,27 @@
   padding-left: 3%;
 }
 
+.msg-headers {
+  /* background-color: yellowgreen; */
+}
+
 .msg-user-username{
-  padding-left: 2%;
+  padding-left: 9%;
+  display: flex;
+  justify-content: flex-start;
+  
   color: white;
   margin-top: 0px;
+  width: 200px;
   font-size: .9rem;
+  /* background-color: yellowgreen; */
+}
+
+.msg-user-timestamp {
+  color: white;
+  margin-top: -20px;
+  font-size: .9rem;
+  /* background-color: yellowgreen; */
 }
 
 .msg-context-parent {
@@ -72,7 +108,15 @@
 .msg-context-container {
   display: flex;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  /* background-color: rgba(166, 166, 166, 0.527); */
+  background-image: 
+  linear-gradient(225deg, 
+  rgba(255, 255, 255, .6) 0%,  
+  rgba(255, 255, 255, .38) 20%,  
+  rgba(255, 255, 255, .30) 40%,  
+  rgba(255, 255, 255, .29) 60%,  
+  rgba(255, 255, 255, .36) 80%,  
+  rgba(255, 255, 255, .51) 100%);
   padding: 0% 2%;
   width: 90%;
   min-height: 85%;
@@ -81,8 +125,10 @@
 
 .msg-context {
   font-size: .9rem;
-
+  padding-left: 5%;
+  color: white;
 }
+
 .msg-user-pic {
   border-radius: 50px;
   width: 30%;
