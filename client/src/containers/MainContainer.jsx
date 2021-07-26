@@ -38,6 +38,11 @@ export default function MainContainer({currentUser}) {
     setListOfMessages(messageData);
   };
   
+  const handleCreate = async (formData) => {
+    const messageData = await postMessage(formData);
+    setListOfMessages((prevState) => [...prevState, messageData]);
+    // history.push("/");
+  };
 
   const handleUpdate = async (id, formData) => {
     const messageData = await putMessage(id, formData);
@@ -51,7 +56,8 @@ export default function MainContainer({currentUser}) {
 
   const handleDelete = async (id) => {
     await deleteMessage(id);
-    setListOfMessages((prevState) => prevState.filter((message) => message.id !== id));
+    setListOfMessages((prevState) =>
+      prevState.filter((message) => message.id !== id));
   };
 
   return (
@@ -68,6 +74,7 @@ export default function MainContainer({currentUser}) {
           handleUpdate={handleUpdate}
           handleDelete={handleDelete}
           fetchMessages={fetchMessages}
+          handleCreate={handleCreate}
         />
     </Route>
 

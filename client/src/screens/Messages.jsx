@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-
+import MessageCreate from './MessageCreate';
+import '../assets/CSS/Messages.css'
 
 export default function Messages({
   listOfMessages,
@@ -20,13 +21,17 @@ export default function Messages({
   },[currentUser])
 
   return (
-    <div>
-      <h3>Messages</h3>
+    <div className='messages-parent'>
+      <div className='messages-glass-card'>
       {listOfMessages.map(messages => {
         return <div key={messages.id}>
+          {messages.user_id}
+          <br />
           {messages.context}
         </div>
       })}
+      <MessageCreate />
+      </div>
     </div>
   )
 }
