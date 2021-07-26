@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import MessageCreate from './MessageCreate';
 import '../assets/CSS/Messages.css'
+import BottomSlideNav from '../components/BottomSlideNav';
 
 export default function Messages({
   listOfMessages,
@@ -23,7 +24,9 @@ export default function Messages({
   return (
     <div className='msg-parent'>
       <div className='msg-glass-card'>
-        <div className='msg-gap'></div>
+        <div className='msg-gap'>
+          
+        </div>
         <div className='msg-list'>
       {listOfMessages.map(messages => {
         return <div className='msg-instance' key={messages.id}>
@@ -47,6 +50,8 @@ export default function Messages({
       <MessageCreate />
         </div>
       </div>
+      <div className='bsn-placholder'></div>
+      <BottomSlideNav />
     </div>
   )
 }

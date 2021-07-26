@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
     @messages = Message.where(room_id: params[:room_id])
     @room = Room.find(params[:room_id])
     if @room.users.includes(@current_user)
-    render json: @messages
+    render json: @messages, include: :user
   end
   end
 
