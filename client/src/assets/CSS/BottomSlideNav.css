@@ -12,6 +12,22 @@
   height: 20%;
   border-radius: 55px 55px 0 0;
   /* background-color: rgb(245, 222, 179); */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.bsn-top-img-container {
+  /* background-color: violet; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bsn-top-img {
+  border-radius: 50px;
+  width: 80%;
+  height: 90%;
 }
 
 .bsn-bottom {
