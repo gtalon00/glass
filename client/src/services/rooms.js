@@ -1,8 +1,13 @@
 import api from './api-config'
 
 export const getAllRooms = async () => {
-  const resp = await api.get(`/rooms`)
-  return resp.data
+  const token = localStorage.getItem('authToken');
+
+  if (token) {
+    api.defaults.headers.common.authorization = `Bearer ${token}`
+    const resp = await api.get(`/rooms`)
+    return resp.data
+  }
 }
 
 export const postRoom = async (id, userData) => {

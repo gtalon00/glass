@@ -3,9 +3,16 @@ class RoomsController < ApplicationController
 
   # GET /rooms
   def index
-    @rooms = Room.where(user_id: @current_user.id)
+    # @rooms = @current_user.rooms
 
-    render json: @rooms
+    @rooms = Room.joins(:users).where(users: {id: @current_user.id})
+    # .joins(:users).group('rooms.id')
+    # .select('rooms.*, COUNT(users.id) as user_count').group('rooms.id')
+    #  .where(user_id: @current_user.id);
+
+    # @rooms = Room.where(user: @current_user)
+
+    render json: @rooms, include: :users
   end
 
   # POST /rooms
@@ -27,6 +34,10 @@ class RoomsController < ApplicationController
 
   private
     # Only allow a list of trusted parameters through.
+    # def set_user 
+    #   @user = 
+    # end
+
     def room_params
       params.fetch(:room, {})
     end

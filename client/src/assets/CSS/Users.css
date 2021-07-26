@@ -2,6 +2,7 @@
   background-color: #3c415cf1;
   height: 812px;
   display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
@@ -29,8 +30,10 @@
 .users-list {
   /* background-color: thistle; */
   display: grid;
+  justify-content: center;
+  width: 100%;
   grid-gap: 20px;
-  grid-template-columns: repeat(2, 125px);
+  grid-template-columns: repeat(2, 155px);
 }
 
 .users-profile-card {
@@ -43,6 +46,26 @@
   height: 100%;
   margin-bottom: 5%;
   border-radius: 40px;
+}
+
+.users-profile-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: tomato; */
+  border-radius: 40px 40px 0 0;
+  height: 65%;
+  width: 100%;
+}
+
+.users-profile-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(120, 120, 120, 0.5);
+  border-radius: 0 0 40px 40px;
+  height: 35%;
+  width: 100%;
 }
 
 .users-profile-img {

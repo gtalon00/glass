@@ -19,17 +19,17 @@ export default function MainContainer({currentUser}) {
       const userData = await getAllUsers();
       setListOfUsers(userData);
     };
-    const fetchRooms = async () => {
-      const roomData = await getAllRooms();
-      setListOfRooms(roomData);
-    };
-    const fetchMessages = async () => {
-      const messageData = await getAllMessages();
-      setListOfMessages(messageData);
-    };
-    fetchRooms()
-    fetchMessages();
+    // const fetchRooms = async () => {
+    //   const roomData = await getAllRooms();
+    //   setListOfRooms(roomData);
+    // };
+    // const fetchMessages = async () => {
+    //   const messageData = await getAllMessages();
+    //   setListOfMessages(messageData);
+    // };
+    // fetchRooms()
     fetchUsers();
+    // fetchMessages();
   }, []);
 
   return (
@@ -43,7 +43,7 @@ export default function MainContainer({currentUser}) {
     </Route>
 
     <Route path="/rooms">
-        <Rooms listOfRooms={listOfRooms}/>
+        <Rooms listOfRooms={listOfRooms} currentUser={currentUser}/>
     </Route>
       
     <Route path='/'>

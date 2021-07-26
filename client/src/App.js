@@ -30,6 +30,7 @@ function App() {
     setCurrentUser(userData);
     history.push('/users')
   };
+
   return (
     <div className="App">
       <Layout currentUser={currentUser}>
@@ -44,7 +45,7 @@ function App() {
           </Route>
 
           <Route path='/'>
-            <MainContainer />
+            <MainContainer currentUser={currentUser} />
           </Route>
 
         </Switch>

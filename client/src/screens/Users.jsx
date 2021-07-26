@@ -1,4 +1,5 @@
 import React from "react";
+import BottomSlideNav from "../components/BottomSlideNav";
 import '../assets/CSS/Users.css'
 
 
@@ -18,12 +19,17 @@ export default function Flavors(props) {
       {listOfUsers &&
         listOfUsers.map((user) => (
           <div className='users-profile-card' key={user.id}>
+            <div className='users-profile-card-top'>
               <img className='users-profile-img' src={user.profile_pic} alt='Profle Picture'/>
-            <p>{user.username}</p>
-          </div>
+            </div>
+            <div className='users-profile-card-bottom'>
+              <p>{user.username}</p>
+            </div>
+            </div>
         ))}
         </div>
-        </div>
+      </div>
+      <BottomSlideNav />
     </div>
   );
 }

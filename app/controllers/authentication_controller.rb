@@ -17,6 +17,7 @@ class AuthenticationController < ApplicationController
   
   # GET /auth/verify
   def verify
+    # puts @current_user.username
     render json: @current_user.attributes.except("password_digest"), status: :ok
   end
 
