@@ -40,6 +40,34 @@
   background-color: white;
 }
 
+.msg-user-conatiner {
+  display: flex;
+  /* background-color: rgb(158, 97, 97); */
+}
+
+.msg-user {
+  display: flex;
+  /* background-color: violet; */
+  width: 60%;
+}
+
+.msg-user-username{
+  padding-left: 2%;
+}
+
+.msg-context-parent {
+  display: flex;
+  justify-content: center;
+  background-color: yellowgreen;
+}
+
+.msg-context-container {
+  background-color: yellow;
+  width: 90%;
+}
+
+
+
 .msg-input-container {
   /* background-color: chartreuse; */
   width: 100%;

@@ -27,9 +27,18 @@ export default function Messages({
         <div className='msg-list'>
       {listOfMessages.map(messages => {
         return <div className='msg-instance' key={messages.id}>
-          <p className='msg-user'>{messages.user.username}</p>
+          <div className='msg-user-conatiner'>
+          <div className='msg-user'>
+          <img className='msg-user-pic' src={messages.user.profile_pic} alt='' />
+          <p className='msg-user-username'>{messages.user.username}</p>
+          </div>
+          </div>
           <br />
+          <div className='msg-context-parent'>
+          <div className='msg-context-container'>
           <p className='msg-context'>{messages.context}</p>
+          </div>
+          </div>
           </div>
       })}
         </div>
