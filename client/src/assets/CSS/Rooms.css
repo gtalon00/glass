@@ -1,0 +1,100 @@
+.rooms-parent {
+  background-color: #3c415cf1;
+  height: 812px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rooms-glass-card {
+  width: 95%;
+  height: 90%;
+  box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
+  border-radius: 55px;
+  background-color: rgb(255, 255, 255, 0.1);
+  /* background: linear-gradient(#2396bf, #0d5b77 40%, #004961 3%, #004961);; */
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  /* backdrop-filter: blur(5px); */
+}
+
+.rooms-contact-header-container{
+  /* background-color: cadetblue; */
+  color: white;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rooms-list {
+  /* background-color: blueviolet; */
+  display: flex;
+  flex-flow: column;
+  /* justify-content: center; */
+  /* align-content: center; */
+  width: 90%;
+  height: 90%;
+}
+
+.rooms-instance {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 10.5%;
+  margin: 1.25% 0 1.25% 0;
+  border-radius: 55px;
+}
+
+.rooms-instance a {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  text-decoration: none;
+  color: white;
+  height: 100%;
+}
+
+.rooms-instance-img {
+/* background-color: blue; */
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+}
+
+.rooms-instance-chat-detail {
+  display: flex;
+  flex-flow: column;
+  padding-top: 2.3%;
+  /* justify-content: center; */
+  width: 75%;
+}
+
+.rooms-instance-username {
+  /* background-color: burlywood; */
+}
+
+.rooms-username {
+/* background-color: cadetblue; */
+  padding-left: 4%;
+  padding-bottom: 2.5%;
+  margin: 0;
+}
+
+.rooms-timestamp {
+  padding-left: 4%;
+  font-size: .8rem;
+  margin: 0;
+}
+
+.rooms-profile-img {
+  border-radius: 50px;
+  width: 80%;
+  box-shadow: 2px 2px 8px rgb(0, 0, 0, 0.5);
+}

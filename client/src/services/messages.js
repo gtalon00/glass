@@ -15,7 +15,7 @@ export const putMessage = async (id, messageData) => {
   return resp.data
 }
 
-export const destroy = async (id) => {
+export const deleteMessage = async (id) => {
   const resp = await api.delete(`/messages/${id}`)
   return resp.data
 }

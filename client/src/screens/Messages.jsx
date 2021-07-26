@@ -1,27 +1,32 @@
 import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom';
 
 
-export default function Messages({ currentUser, listOfMessages }) {
-  const [messages, setMessages] = useState()
-  
-  // useEffect
-  // will get all messages with id (probably from the params)
-  // if statement for currentUser
-  // set state
+export default function Messages({
+  listOfMessages,
+  setListOfMessages,
+  currentUser,
+  handleDelete,
+  handleChange,
+  fetchMessages
+}) {
+  const [messages, setMessages] = useState([]);
+  const { id } = useParams();
 
   useEffect(() => {
-    const extractMessages = () => {
-      // const users = 
+    if (currentUser) {
+      fetchMessages(id);
     }
-    if (listOfMessages.length && currentUser) {
-      extractMessages()
-    }
-  }, [currentUser])
+  },[currentUser])
 
   return (
     <div>
       <h3>Messages</h3>
-      
+      {listOfMessages.map(messages => {
+        return <div key={messages.id}>
+          {messages.context}
+        </div>
+      })}
     </div>
   )
 }

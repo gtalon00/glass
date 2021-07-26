@@ -20,16 +20,16 @@ export default function Flavors(props) {
         listOfUsers.map((user) => (
           <div className='users-profile-card' key={user.id}>
             <div className='users-profile-card-top'>
-              <img className='users-profile-img' src={user.profile_pic} alt='Profle Picture'/>
+              <img className='users-profile-img' src={user.profile_pic} alt='Profle'/>
             </div>
             <div className='users-profile-card-bottom'>
-              <p>{user.username}</p>
+              <p className='users-profile-name'>{user.username}</p>
             </div>
             </div>
         ))}
         </div>
       </div>
-      <div className='users-bsn-placholder'></div>
+      <div className='bsn-placholder'></div>
       <BottomSlideNav currentUser={currentUser} />
     </div>
   );

@@ -4,9 +4,9 @@ class MessagesController < ApplicationController
   # GET /messages
   
   def index
-    @messages = Message.where(room_id: params[:id])
-    @room = Room.find(params[:id])
-    if @room.includes(@current_user)
+    @messages = Message.where(room_id: params[:room_id])
+    @room = Room.find(params[:room_id])
+    if @room.users.includes(@current_user)
     render json: @messages
   end
   end
