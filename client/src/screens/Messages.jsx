@@ -11,7 +11,7 @@ export default function Messages({
   handleChange,
   fetchMessages
 }) {
-  const [messages, setMessages] = useState([]);
+  // const [messages, setMessages] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -26,10 +26,10 @@ export default function Messages({
         <div className='msg-gap'></div>
         <div className='msg-list'>
       {listOfMessages.map(messages => {
-        return <div key={messages.id}>
-          {messages.user_id}
+        return <div className='msg-instance' key={messages.id}>
+          <p className='msg-user'>{messages.user.username}</p>
           <br />
-          {messages.context}
+          <p className='msg-context'>{messages.context}</p>
           </div>
       })}
         </div>
