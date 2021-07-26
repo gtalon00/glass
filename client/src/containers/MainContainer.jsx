@@ -42,7 +42,7 @@ export default function MainContainer({currentUser}) {
     );
     // history.push("/foods");
   };
-
+ 
   return (
     <Switch>
     <Route path='/users'>
