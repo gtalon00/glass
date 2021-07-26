@@ -15,17 +15,20 @@ export default function MessageCreate({handleCreate}) {
       }));
     };
   
-    return (
+  return (
+      <div className='mc-parent'>
       <form
+        className='mc-form'
         onSubmit={(e) => {
           e.preventDefault();
           handleCreate(formData);
         }}
-      >
+        >
         <label className='mc-label'>
           <input className='mc-input' type="text" name="context" value={context} onChange={handleChange} placeholder='Type message here'/>
         </label>
         <button className='mc-btn'>Send</button>
       </form>
+        </div>
   )
 }

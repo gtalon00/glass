@@ -21,16 +21,21 @@ export default function Messages({
   },[currentUser])
 
   return (
-    <div className='messages-parent'>
-      <div className='messages-glass-card'>
+    <div className='msg-parent'>
+      <div className='msg-glass-card'>
+        <div className='msg-gap'></div>
+        <div className='msg-list'>
       {listOfMessages.map(messages => {
         return <div key={messages.id}>
           {messages.user_id}
           <br />
           {messages.context}
-        </div>
+          </div>
       })}
+        </div>
+        <div className='msg-input-container'>
       <MessageCreate />
+        </div>
       </div>
     </div>
   )

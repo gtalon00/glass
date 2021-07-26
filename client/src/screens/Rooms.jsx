@@ -30,8 +30,8 @@ export default function Rooms({ listOfRooms, currentUser }) {
           <Link to={`/rooms/${chat.id}/messages`}>
             <div className='rooms-instance-img'><img className='rooms-profile-img' src={chat.user.profile_pic} alt={chat.user.username}/></div>
             <div className='rooms-instance-chat-detail' >
-              <div className='rooms-instance-username' ><p className='rooms-username'>{chat.user.username}</p></div>
-              <div className='rooms-instance-time' ><p className='rooms-timestamp'>Last messaged: 12:47pm</p></div>
+              <div className='rooms-instance-username'><p className='rooms-username'>{chat.user.username}</p></div>
+              <div className='rooms-instance-time'><p className='rooms-timestamp'>Last messaged: 12:47pm</p></div>
               </div>
         </Link>
         </div>
