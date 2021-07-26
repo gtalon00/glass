@@ -1,5 +1,5 @@
 .mc-parent {
-  /* background-color: crimson; */
+  background-color: rgba(234, 234, 234, 0.724);
   height: 100%;
   display: flex;
   justify-content: center;
@@ -19,6 +19,7 @@
 .mc-input {
   /* margin: auto 0; */
   /* width: %; */
+  /* background-color: yellowgreen; */
   height: 44px;
   border: 0px;
   border-radius: 55px 0 0 55px;

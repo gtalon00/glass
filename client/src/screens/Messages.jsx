@@ -31,6 +31,7 @@ export default function Messages({
           <div className='msg-user'>
           <img className='msg-user-pic' src={messages.user.profile_pic} alt='' />
           <p className='msg-user-username'>{messages.user.username}</p>
+          {/* <p className='msg-user-timestamp'>{messages.created_at}</p> */}
           </div>
           </div>
           <br />
