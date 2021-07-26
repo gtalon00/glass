@@ -31,10 +31,10 @@ export default function Login(props) {
         >
           <div className='login-form-content'>
       <label className='login-label-username'>
-            Username:
+            <p className='login-label-text'>Username:</p>
             <br/>
             <input
-          className='login-username'
+          className='login-username login-input'
           type="text"
           name="username"
           value={username}
@@ -43,10 +43,10 @@ export default function Login(props) {
       </label>
       <br />
       <label className='login-label-password'>
-            Password:
+            <p className='login-label-text'>Password:</p>
             <br/>
             <input
-          className='login-password'
+          className='login-password login-input'
           type="password"
           name="password"
           value={password}
@@ -55,10 +55,10 @@ export default function Login(props) {
       </label>
       <br />
           </div>
-      <button className='login-btn' >Sign in</button>
+      <button className='login-btn'>Sign in</button>
 
           <div className='login-redirect-container'>
-      <h4 className='login-redirect-content'>Don't Have an Account?<Link to="/register"> Register Here</Link></h4>
+      <h4 className='login-redirect-content'><i>Don't Have an Account?</i><Link className='redirect-link' to="/register"> Register Here</Link></h4>
           </div>
 
       </form>

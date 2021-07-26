@@ -1,7 +1,7 @@
 import { useState } from "react"
 import '../assets/CSS/MessageCreate.css'
 
-export default function MessageCreate({handleCreate}) {
+export default function MessageCreate({id, handleCreate}) {
     const [formData, setFormData] = useState({
       context: "",
     });
@@ -21,11 +21,18 @@ export default function MessageCreate({handleCreate}) {
         className='mc-form'
         onSubmit={(e) => {
           e.preventDefault();
-          handleCreate(formData);
+          handleCreate(id, formData);
         }}
         >
         <label className='mc-label'>
-          <input className='mc-input' type="text" name="context" value={context} onChange={handleChange} placeholder='Type message here'/>
+          <input
+            className='mc-input'
+            type="text"
+            name="context"
+            value={context}
+            onChange={handleChange}
+            placeholder='Type message here'
+          />
         </label>
         <button className='mc-btn'>Send</button>
       </form>

@@ -6,6 +6,8 @@ export const getAllMessages = async (id) => {
 }
 
 export const postMessage = async (id, messageData) => {
+  console.log(id)
+  console.log(messageData)
   const resp = await api.post(`/rooms/${id}/messages`, messageData)
   return resp.data
 }

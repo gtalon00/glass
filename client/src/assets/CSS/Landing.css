@@ -10,13 +10,34 @@
 
 .landing-glass-card {
   width: 95%;
-  height: 95%;
+  height: 98%;
   box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
   border-radius: 55px;
-  background-color: rgb(255, 255, 255, 0.1);
+  /* background-color: rgb(255, 255, 255, 0.1); */
+  /* background-color: #ffffff00; */
+  /* background-image: 
+  linear-gradient(315deg, 
+  #ffffff0a 0%, 
+  #ffffff1c 20%, 
+  #ffffff1c 30%, 
+  #ffffff25 40%, 
+  #ffffff1e 50%, 
+  #ffffff1f 60%, 
+  #cfcfcf57 70%, 
+  #cfcfcf79 80%, 
+  #cfcfcf96 90%, 
+  #aaaaaa9f 100%); */
+  background-image: 
+  linear-gradient(140deg, 
+  rgba(255, 255, 255, .62) 0%,  
+  rgba(255, 255, 255, .45) 20%,  
+  rgba(255, 255, 255, .27) 40%,  
+  rgba(255, 255, 255, .33) 60%,  
+  rgba(255, 255, 255, .47) 80%,  
+  rgba(255, 255, 255, .49) 100%);
   overflow: hidden;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -89,20 +110,39 @@
   height: 15%;
 }
 
-.landing-login-btn {
-  width: 200px;
-  height: 48px;
-  border-radius: 40px;
-  border: 0px;
-  /* position: absolute;
-  top: 80%; */
-}
-
 .landing-register-btn {
   width: 200px;
   height: 48px;
   border-radius: 40px;
   border: 0px;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: 
+  linear-gradient(140deg, 
+  rgba(255, 255, 255, .71) 0%,  
+  rgba(255, 255, 255, .46) 20%,  
+  rgba(255, 255, 255, .20) 40%,  
+  rgba(255, 255, 255, .20) 50%,  
+  rgba(255, 255, 255, .20) 60%,  
+  rgba(255, 255, 255, .46) 80%,  
+  rgba(255, 255, 255, .61) 100%);
+  /* position: absolute;
+  top: 80%; */
+}
+
+.landing-login-btn {
+  width: 200px;
+  height: 48px;
+  border-radius: 40px;
+  border: 0px;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: 
+  linear-gradient(140deg, 
+  rgba(255, 255, 255, .61) 0%,  
+  rgba(255, 255, 255, .36) 20%,  
+  rgba(255, 255, 255, .28) 40%,  
+  rgba(255, 255, 255, .29) 60%,  
+  rgba(255, 255, 255, .36) 80%,  
+  rgba(255, 255, 255, .51) 100%);
   /* position: absolute;
   top: 80%; */
 }

@@ -10,7 +10,8 @@ export default function Messages({
   currentUser,
   handleDelete,
   handleChange,
-  fetchMessages
+  fetchMessages,
+  handleCreate
 }) {
   // const [messages, setMessages] = useState([]);
   const { id } = useParams();
@@ -29,12 +30,12 @@ export default function Messages({
         </div>
         <div className='msg-list'>
       {listOfMessages.map(messages => {
-        return <div className='msg-instance' key={messages.id}>
+        return <div className='msg-instance' key={messages?.id}>
           <div className='msg-user-conatiner'>
           <div className='msg-user'>
-              <img className='msg-user-pic' src={messages.user.profile_pic} alt='' />
+              <img className='msg-user-pic' src={messages?.user?.profile_pic} alt='' />
           <div className='msg-headers'>
-          <p className='msg-user-username'>{messages.user.username}</p>
+          <p className='msg-user-username'>{messages?.user?.username}</p>
           {/* <p className='msg-user-timestamp'>{messages.created_at}</p> */}
           </div>
           </div>
@@ -42,14 +43,17 @@ export default function Messages({
           <br />
           <div className='msg-context-parent'>
           <div className='msg-context-container'>
-          <p className='msg-context'>{messages.context}</p>
+          <p className='msg-context'>{messages?.context}</p>
           </div>
           </div>
           </div>
       })}
         </div>
         <div className='msg-input-container'>
-      <MessageCreate />
+          <MessageCreate
+            id={id}
+            handleCreate={handleCreate}
+          />
         </div>
       </div>
       <div className='bsn-placholder'></div>

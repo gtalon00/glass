@@ -22,7 +22,7 @@ export default function Register(props) {
   return (
     <div className='register-parent'>
       <div className='register-glass-card'>
-        <h3 className='register-title'>Register Here:</h3>
+        <h3 className='register-title'>Register :</h3>
         <form
           className='register-form'
       onSubmit={(e) => {
@@ -30,11 +30,11 @@ export default function Register(props) {
         handleRegister(formData);
       }}
       >
-<div className='register-form-content'>
+    <div className='register-form-content'>
       <label className='register-label-username'>
-        Username:
+        <p className='register-label-text'>Username:</p>
         <input
-          className='register-username'
+          className='register-username register-input' 
           type="text"
           name="username"
           value={username}
@@ -43,9 +43,9 @@ export default function Register(props) {
       </label>
       <br />
       <label className='register-label-email'>
-        Email:
+        <p className='register-label-text'>Email:</p>
         <input 
-        className='register-email'
+        className='register-email register-input'
         type="text" 
         name="email" 
         value={email} 
@@ -53,9 +53,9 @@ export default function Register(props) {
       </label>
       <br />
       <label className='register-label-password'>
-        Password:
+        <p className='register-label-text'>Password:</p>
         <input
-          className='register-password'
+          className='register-password register-input'
           type="password"
           name="password"
           value={password}
@@ -67,7 +67,7 @@ export default function Register(props) {
       <button className='register-btn'>Sign up</button>
 
       <div className='register-redirect-container'>
-      <h4 className='register-redirect-content'>Have an Account? <Link to="/login">Log in Here</Link></h4>
+      <h4 className='register-redirect-content'><i>Have an Account?</i><Link className='redirect-link' to="/login">Log in Here</Link></h4>
       </div>
         </form>
       </div>

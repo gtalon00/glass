@@ -3,7 +3,7 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import { getAllRooms } from "../services/rooms"
 import { getAllUsers } from "../services/users";
 // import { deleteUser, getAllUsers, putUsers } from "../services/users";
-import { deleteMessage, getAllMessages, putMessage } from "../services/messages";
+import { deleteMessage, getAllMessages, putMessage, postMessage } from "../services/messages";
 import Landing from '../screens/Landing'
 import Users from '../screens/Users'
 import Rooms from '../screens/Rooms'
@@ -37,10 +37,13 @@ export default function MainContainer({currentUser}) {
     const messageData = await getAllMessages(id);
     setListOfMessages(messageData);
   };
-  
-  const handleCreate = async (formData) => {
-    const messageData = await postMessage(formData);
-    setListOfMessages((prevState) => [...prevState, messageData]);
+  console.log(currentUser)
+  const handleCreate = async (id, formData) => {
+    console.log(id)
+    console.log(formData)
+    const messageData = await postMessage(id, formData);
+    const user = currentUser
+    setListOfMessages((prevState) => [...prevState, {...messageData, user}]);
     // history.push("/");
   };
 
