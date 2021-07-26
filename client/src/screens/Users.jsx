@@ -6,7 +6,7 @@ import '../assets/CSS/Users.css'
 // import { Link } from "react-router-dom";
 
 export default function Flavors(props) {
-  const { listOfUsers } = props;
+  const { listOfUsers, currentUser } = props;
 
 
   return (
@@ -29,7 +29,7 @@ export default function Flavors(props) {
         ))}
         </div>
       </div>
-      <BottomSlideNav />
+      <BottomSlideNav currentUser={currentUser} />
     </div>
   );
 }

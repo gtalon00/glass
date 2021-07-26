@@ -35,7 +35,7 @@ export default function MainContainer({currentUser}) {
   return (
     <Switch>
     <Route path='/users'>
-        <Users listOfUsers={listOfUsers} />
+        <Users listOfUsers={listOfUsers} currentUser={currentUser}/>
     </Route>
       
     <Route path="/rooms/:id/messages">
