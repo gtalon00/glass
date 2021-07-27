@@ -62,14 +62,20 @@ export default function Messages({
                       </div>
                       {/* <p className='msg-user-timestamp'>{messages.created_at}</p> */}
                       <div className="msg-edit-logo-container">
-                        <FiEdit3
-                          className="msg-edit-logo edit"
-                          onClick={handleRevealEdit}
-                        />
-                        <AiOutlineDelete
-                          className="msg-edit-logo delete"
-                          onClick={() => handleDelete(message.id)}
-                        />
+                        {currentUser.id === message?.user?.id ? (
+                          <div className="msg-edit-logo-conditional">
+                            <FiEdit3
+                              className="msg-edit-logo edit"
+                              onClick={handleRevealEdit}
+                            />
+                            <AiOutlineDelete
+                              className="msg-edit-logo delete"
+                              onClick={() => handleDelete(message.id)}
+                            />
+                          </div>
+                        ) : (
+                          ""
+                        )}
                       </div>
                     </div>
                   </div>
@@ -78,18 +84,25 @@ export default function Messages({
                 <div className="msg-context-parent">
                   <div className="msg-context-container">
                     {toggleEdit ? (
-                      <form>
+                      <form
+                        className="msg-form"
+                        onSubmit={(e) => {
+                          e.preventDefault();
+                          handleUpdate(message.id, formData);
+                        }}
+                      >
                         <label>
-                          Edit
+                          {/* Edit */}
                           <input
-                            className="mc-input"
+                            className="msg-input"
+                            placeholder="context"
                             type="text"
                             name="context"
                             value={message?.context}
                             onChange={handleChange}
                           />
-                          <button></button>
                         </label>
+                        <button>Edit</button>
                       </form>
                     ) : (
                       <p className="msg-context">{message?.context}</p>

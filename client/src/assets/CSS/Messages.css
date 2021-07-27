@@ -121,7 +121,7 @@
   );
   padding: 0% 2%;
   width: 90%;
-  min-height: 85%;
+  min-height: 45.781px;
   border-radius: 0 55px 55px 55px;
 }
 
@@ -129,6 +129,18 @@
   font-size: 0.9rem;
   padding-left: 5%;
   color: white;
+}
+
+.msg-input {
+  height: 45px;
+  border: none;
+  /* border-top: 0.5px solid; */
+  border-bottom: 0.5px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  margin-left: 4%;
+  width: 280px;
+  color: white;
+  font-size: 0.91rem;
 }
 
 .msg-user-pic {
