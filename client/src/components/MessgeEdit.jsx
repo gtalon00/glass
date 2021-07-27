@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../assets/CSS/MessageEdit.css";
 
 export default function MessgeEdit({
   message,
@@ -26,7 +27,7 @@ export default function MessgeEdit({
 
   return (
     <form
-      className="msg-form"
+      className="msg-edit-form"
       onSubmit={(e) => {
         e.preventDefault();
         handleUpdate(message.id, formData);
@@ -36,7 +37,7 @@ export default function MessgeEdit({
       <label>
         {/* Edit */}
         <input
-          className="msg-input"
+          className="msg-edit-input"
           // placeholder="context"
           type="text"
           name="context"
@@ -44,7 +45,9 @@ export default function MessgeEdit({
           onChange={handleChange}
         />
       </label>
-      <button>Edit</button>
+      <div className="msg-edit-button-container">
+        <button className="msg-edit-button">Edit</button>
+      </div>
     </form>
   );
 }

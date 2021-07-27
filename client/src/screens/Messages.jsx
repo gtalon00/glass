@@ -41,18 +41,20 @@ export default function Messages({
               <div className="msg-instance" key={message?.id}>
                 <div className="msg-user-conatiner">
                   <div className="msg-user">
-                    <img
-                      className="msg-user-pic"
-                      src={message?.user?.profile_pic}
-                      alt=""
-                    />
+                    <div className="msg-user-img-container">
+                      <img
+                        className="msg-user-pic"
+                        src={message?.user?.profile_pic}
+                        alt=""
+                      />
+                    </div>
                     <div className="msg-headers">
                       <div className="msg-user-username-container">
                         <p className="msg-user-username">
                           {message?.user?.username}
                         </p>
                       </div>
-                      {/* <p className='msg-user-timestamp'>{messages.created_at}</p> */}
+                      {/* <p className='msg-user-timestamp'>{messages?.created_at}</p> */}
                       <div className="msg-edit-logo-container">
                         {currentUser.id === message?.user?.id ? (
                           <div className="msg-edit-logo-conditional">

@@ -64,6 +64,14 @@
   padding-left: 3%;
 }
 
+.msg-user-img-container {
+  /* width: 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* background-color: rgb(147, 141, 141); */
+}
+
 .msg-headers {
   display: flex;
   flex-flow: column;
@@ -74,7 +82,7 @@
 .msg-edit-logo-container {
   /* background-color: royalblue; */
   color: #111f28;
-  padding-top: 6%;
+  /* padding-top: 6%; */
   padding-left: 9%;
 }
 
@@ -86,6 +94,7 @@
   padding-left: 9%;
   color: white;
   margin-top: 0px;
+  margin-bottom: 7px;
   width: 200px;
   font-size: 0.9rem;
   /* background-color: yellowgreen; */
@@ -131,22 +140,10 @@
   color: white;
 }
 
-.msg-input {
-  height: 45px;
-  border: none;
-  /* border-top: 0.5px solid; */
-  border-bottom: 0.5px solid white;
-  background-color: rgba(0, 0, 0, 0);
-  margin-left: 4%;
-  width: 280px;
-  color: white;
-  font-size: 0.91rem;
-}
-
 .msg-user-pic {
   border-radius: 50px;
-  width: 30%;
-  height: 100%;
+  width: 40px;
+  height: 40px;
 }
 
 .msg-input-container {

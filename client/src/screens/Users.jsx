@@ -28,8 +28,7 @@ export default function Users({
                     src={user.profile_pic}
                     alt="Profle"
                   />
-                </div>
-                <div className="users-profile-card-bottom">
+
                   <p className="users-profile-name">{user.username}</p>
                 </div>
               </div>

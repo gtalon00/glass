@@ -2,7 +2,7 @@ Message.destroy_all
 Room.destroy_all
 User.destroy_all
 
-@donny = User.create!(username: 'Donny E.', email: 'email@email.com', password: '123456', profile_pic: 'https://ca.slack-edge.com/T0351JZQ0-U01UBRS5VFW-5ef35a002c46-72')
+@donny = User.create!(username: 'Donny E.', email: 'email@email.com', password: '123456', profile_pic: 'https://d5t4h5a9.rocketcdn.me/wp-content/uploads/2020/11/Professional-Headshot-Poses-Blog-Post.jpg')
 @maggie = User.create!(username: 'Maggie Laton', email: 'mail@email.com', password: '654321', profile_pic: 'https://ca.slack-edge.com/T0351JZQ0-U01UBRS5VFW-5ef35a002c46-72')
 @cab = User.create!(username: 'Cab C.', email: 'minthemooch@email.com', password: 'letmetellyou', profile_pic: 'https://syncopatedtimes.com/wp-content/uploads/2020/02/Cab_in_zoot_suit.jpg')
 @dr_arturo = User.create!(username: ' Dr. Arturo S.', email: 'orangecedar@email.com', password: '456456', profile_pic: 'https://pbs.twimg.com/profile_images/1105583370010947585/cdFPnfIk.png')
