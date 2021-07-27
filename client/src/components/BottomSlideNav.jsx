@@ -27,7 +27,7 @@ export default function BottomSlideNav({currentUser}) {
       <div className={toggle ? 'bsn-middle bsn-middle-revealed' : 'bsn-middle'}>
         <Link className='bsn-links' to='/users'><RiUserSearchLine className='bsn-icons'/></Link>
         <Link className='bsn-links' to='/rooms'><IoIosChatbubbles className='bsn-icons'/> </Link>
-        <Link className='bsn-links' to='/'><RiUserSettingsLine className='bsn-icons'/> </Link>
+        {/* <Link className='bsn-links' to='/'><RiUserSettingsLine className='bsn-icons'/> </Link> */}
       </div>
       <div className={toggle ? 'bsn-bottom bsn-bottom-revealed' : 'bsn-bottom'}>
         

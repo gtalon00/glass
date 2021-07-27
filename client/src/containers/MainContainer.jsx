@@ -67,7 +67,9 @@ export default function MainContainer({currentUser}) {
     <Switch>
 
     <Route path='/users'>
-        <Users listOfUsers={listOfUsers} currentUser={currentUser}/>
+        <Users
+          listOfUsers={listOfUsers}
+          currentUser={currentUser} />
     </Route>
 
     <Route path="/rooms/:id/messages">
@@ -82,7 +84,9 @@ export default function MainContainer({currentUser}) {
     </Route>
 
     <Route path="/rooms">
-        <Rooms listOfRooms={listOfRooms} currentUser={currentUser}/>
+        <Rooms
+          listOfRooms={listOfRooms}
+          currentUser={currentUser} />
     </Route>
 
     <Route path='/'>
