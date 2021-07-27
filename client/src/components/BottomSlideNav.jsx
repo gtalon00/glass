@@ -3,6 +3,7 @@ import '../assets/CSS/BottomSlideNav.css'
 import { useState } from 'react'
 import { RiUserSearchLine, RiUserSettingsLine } from 'react-icons/ri';
 import { IoIosChatbubbles } from 'react-icons/all';
+import { GiMirrorMirror } from 'react-icons/gi';
 
 
 export default function BottomSlideNav({currentUser}) {
@@ -31,6 +32,13 @@ export default function BottomSlideNav({currentUser}) {
       </div>
       <div className={toggle ? 'bsn-bottom bsn-bottom-revealed' : 'bsn-bottom'}>
         
+        <div className='bsn-bottom-left-detail'><GiMirrorMirror className='mirror-icon'/></div>
+        <div className='bsn-bottom-right-detail'>
+          {currentUser?.username}
+          {currentUser?.email}
+          <button>Log Out</button>
+        </div>
+
       </div>
       </div>
   )

@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
     puts params[:room_id]
     @message = Message.new(message_params)
     @message.user = @current_user
-    # @room.messages = 
+    @room.messages = 
     @message.room = @room
     if @message.save
       render json: @message, status: :created

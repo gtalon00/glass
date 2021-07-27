@@ -52,7 +52,8 @@
   height: 20%;
   display: flex;
   justify-content: space-evenly;
-  background-color: rgb(91, 78, 54);
+  border-bottom: 1px solid white;
+  /* background-color: rgb(91, 78, 54); */
 }
 .bsn-middle-revealed {
   height: 20%;
@@ -62,9 +63,30 @@
   height: 20%;
 }
 .bsn-bottom-revealed {
+  display: flex;
   height: 50%;
   width: 100%;
-  background-color: rosybrown;
+  /* background-color: rosybrown; */
+}
+
+.bsn-bottom-left-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  /* background-color: sandybrown; */
+}
+
+.bsn-bottom-right-detail {
+  width: 70%;
+  height: 100%;
+  /* background-color: rgb(255, 0, 0); */
+}
+
+.mirror-icon {
+  font-size: 7em;
+  color: white;
 }
 
 .bsn-links {
