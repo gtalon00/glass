@@ -164,6 +164,6 @@
   .bsn-placholder {
     width: 20%;
     height: 8%;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
   }
 }
