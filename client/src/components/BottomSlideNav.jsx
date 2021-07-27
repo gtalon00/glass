@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../assets/CSS/BottomSlideNav.css'
+import { useState } from 'react'
 
 export default function BottomSlideNav({currentUser}) {
+  const [toggle, setToggle] = useState(false);
+    
 
   return (
-    <div className='bsn-parent '>
+  <div className={toggle ? 'bsn-parent bsn-revealed' : 'bsn-parent'}>
       <div className='bsn-top'>
         <div className='bsn-top-img-container'>
         <img className='bsn-top-img' src={currentUser?.profile_pic} />
