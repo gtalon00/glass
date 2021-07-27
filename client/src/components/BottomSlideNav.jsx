@@ -1,12 +1,22 @@
 import { Link } from "react-router-dom";
 import "../assets/CSS/BottomSlideNav.css";
+import { useHistory } from "react-router-dom";
 import { useState } from "react";
-import { RiUserSearchLine, RiUserSettingsLine } from "react-icons/ri";
+import { RiUserSearchLine } from "react-icons/ri";
 import { IoIosChatbubbles } from "react-icons/all";
 import { GiMirrorMirror } from "react-icons/gi";
+import { removeToken } from "../services/auth";
 
-export default function BottomSlideNav({ currentUser }) {
+export default function BottomSlideNav({ currentUser, setCurrentUser }) {
   const [toggle, setToggle] = useState(false);
+  const history = useHistory();
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem("authToken");
+    removeToken();
+    history.push("/");
+  };
 
   const handleAppear = async () => {
     toggle ? setToggle(false) : setToggle(true);
@@ -22,6 +32,7 @@ export default function BottomSlideNav({ currentUser }) {
             }
             src={currentUser?.profile_pic}
             onClick={handleAppear}
+            alt={`${currentUser?.username}'s profile`}
           />
         </div>
       </div>
@@ -45,7 +56,9 @@ export default function BottomSlideNav({ currentUser }) {
           <h3 className="bsn-bottom-right-email bottom-txt">
             {currentUser?.email}
           </h3>
-          <button className="bsn-bottom-btn">Log Out</button>
+          <button className="bsn-bottom-btn" onClick={handleLogout}>
+            Log Out
+          </button>
         </div>
       </div>
     </div>

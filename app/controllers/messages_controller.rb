@@ -21,7 +21,7 @@ class MessagesController < ApplicationController
     # @room.messages = 
     @message.room = @room
     if @message.save
-      render json: @message, status: :created
+      render json: @message, include: :user, status: :created
     else
       render json: @message.errors, status: :unprocessable_entity
     end
@@ -31,7 +31,7 @@ class MessagesController < ApplicationController
   def update
     if @current_user.messages.includes(@message)
       if @message.update(message_params)
-        render json: @message
+        render json: @message, include: :user
       else
         render json: @message.errors, status: :unprocessable_entity
       end

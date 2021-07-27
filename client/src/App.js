@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
-import { Route, Switch, useHistory } from 'react-router-dom';
-import './App.css';
-import Layout from './layouts/Layout';
-import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
-import Login from './screens/Login'
-import Register from './screens/Register'
-import MainContainer from './containers/MainContainer'
+import { useState, useEffect } from "react";
+import { Route, Switch, useHistory } from "react-router-dom";
+import "./App.css";
+import Layout from "./layouts/Layout";
+import { loginUser, registerUser, verifyUser } from "./services/auth";
+import Login from "./screens/Login";
+import Register from "./screens/Register";
+import MainContainer from "./containers/MainContainer";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -22,32 +22,41 @@ function App() {
   const handleRegister = async (formData) => {
     const userData = await registerUser(formData);
     setCurrentUser(userData);
-    history.push('/users')
+    history.push("/users");
   };
 
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
     setCurrentUser(userData);
-    history.push('/users')
+    history.push("/users");
   };
+
+  // const handleLogout = () => {
+  //   setCurrentUser(null);
+  //   localStorage.removeItem("authToken");
+  //   removeToken();
+  //   history.push("/");
+  // };
 
   return (
     <div className="App">
       <Layout currentUser={currentUser}>
         <Switch>
-
-          <Route path='/register'>
+          <Route path="/register">
             <Register handleRegister={handleRegister} />
           </Route>
 
-          <Route path='/login'>
+          <Route path="/login">
             <Login handleLogin={handleLogin} />
           </Route>
 
-          <Route path='/'>
-            <MainContainer currentUser={currentUser} />
+          <Route path="/">
+            <MainContainer
+              currentUser={currentUser}
+              setCurrentUser={setCurrentUser}
+              // handleLogout={handleLogout}
+            />
           </Route>
-
         </Switch>
       </Layout>
     </div>

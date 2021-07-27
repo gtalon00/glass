@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import BottomSlideNav from "../components/BottomSlideNav";
 import "../assets/CSS/Rooms.css";
 
-export default function Rooms({ listOfRooms, currentUser }) {
+export default function Rooms({ listOfRooms, currentUser, setCurrentUser }) {
   const [chatList, setChatList] = useState([]);
 
   useEffect(() => {
@@ -53,7 +53,10 @@ export default function Rooms({ listOfRooms, currentUser }) {
         </div>
       </div>
       <div className="bsn-placholder"></div>
-      <BottomSlideNav currentUser={currentUser} />
+      <BottomSlideNav
+        currentUser={currentUser}
+        setCurrentUser={setCurrentUser}
+      />
     </div>
   );
 }

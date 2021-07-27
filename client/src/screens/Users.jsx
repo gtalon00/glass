@@ -2,11 +2,12 @@ import React from "react";
 import BottomSlideNav from "../components/BottomSlideNav";
 import "../assets/CSS/Users.css";
 
-// import { Link } from "react-router-dom";
-
-export default function Users(props) {
-  const { listOfUsers, currentUser, handleCreateRoom } = props;
-
+export default function Users({
+  listOfUsers,
+  currentUser,
+  handleCreateRoom,
+  setCurrentUser,
+}) {
   return (
     <div className="users-parent">
       <div className="users-glass-card">
@@ -36,7 +37,10 @@ export default function Users(props) {
         </div>
       </div>
       <div className="bsn-placholder"></div>
-      <BottomSlideNav currentUser={currentUser} />
+      <BottomSlideNav
+        currentUser={currentUser}
+        setCurrentUser={setCurrentUser}
+      />
     </div>
   );
 }

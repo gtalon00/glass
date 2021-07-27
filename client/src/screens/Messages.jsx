@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import MessageCreate from "../components/MessageCreate";
 import "../assets/CSS/Messages.css";
 import BottomSlideNav from "../components/BottomSlideNav";
+import MessageEdit from "../components/MessgeEdit";
 import { FiEdit3 } from "react-icons/fi";
 import { AiOutlineDelete } from "react-icons/ai";
 
@@ -10,26 +11,17 @@ export default function Messages({
   listOfMessages,
   fetchMessages,
   currentUser,
+  setCurrentUser,
   handleDelete,
   handleUpdate,
   handleCreate,
 }) {
   const [toggleEdit, setToggleEdit] = useState(false);
-  const [formData, setFormData] = useState({
-    context: "",
-  });
+
   const { id } = useParams();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
-  const handleToggleEdit = async () => {
-    toggleEdit ? setToggleEdit(false) : setToggleEdit(true);
+  const handleToggleEdit = async (id) => {
+    toggleEdit ? setToggleEdit(false) : setToggleEdit(id);
   };
 
   useEffect(() => {
@@ -66,7 +58,7 @@ export default function Messages({
                           <div className="msg-edit-logo-conditional">
                             <FiEdit3
                               className="msg-edit-logo edit"
-                              onClick={handleToggleEdit}
+                              onClick={() => handleToggleEdit(message.id)}
                             />
                             <AiOutlineDelete
                               className="msg-edit-logo delete"
@@ -83,27 +75,12 @@ export default function Messages({
                 <br />
                 <div className="msg-context-parent">
                   <div className="msg-context-container">
-                    {toggleEdit ? (
-                      <form
-                        className="msg-form"
-                        onSubmit={(e) => {
-                          e.preventDefault();
-                          handleUpdate(message.id, formData);
-                        }}
-                      >
-                        <label>
-                          {/* Edit */}
-                          <input
-                            className="msg-input"
-                            // placeholder="context"
-                            type="text"
-                            name="context"
-                            value={message?.context}
-                            onChange={handleChange}
-                          />
-                        </label>
-                        <button onClick={handleToggleEdit}>Edit</button>
-                      </form>
+                    {toggleEdit === message.id ? (
+                      <MessageEdit
+                        message={message}
+                        handleUpdate={handleUpdate}
+                        handleToggleEdit={handleToggleEdit}
+                      />
                     ) : (
                       <p className="msg-context">{message?.context}</p>
                     )}
@@ -118,7 +95,10 @@ export default function Messages({
         </div>
       </div>
       <div className="bsn-placholder"></div>
-      <BottomSlideNav currentUser={currentUser} />
+      <BottomSlideNav
+        currentUser={currentUser}
+        setCurrentUser={setCurrentUser}
+      />
     </div>
   );
 }

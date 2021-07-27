@@ -30,13 +30,6 @@
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   /* backdrop-filter: blur(5px); */
 }
-
-.bsn-placholder {
-  width: 100%;
-  height: 8%;
-  /* background-color: blueviolet; */
-}
-
 .users-contact-header-container {
   /* background-color: turquoise; */
   display: flex;

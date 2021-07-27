@@ -13,7 +13,7 @@ import Users from "../screens/Users";
 import Rooms from "../screens/Rooms";
 import Messages from "../screens/Messages";
 
-export default function MainContainer({ currentUser }) {
+export default function MainContainer({ currentUser, setCurrentUser }) {
   const [listOfUsers, setListOfUsers] = useState([]);
   const [listOfRooms, setListOfRooms] = useState([]);
   const [listOfMessages, setListOfMessages] = useState([]);
@@ -62,7 +62,6 @@ export default function MainContainer({ currentUser }) {
         return message.id === parseInt(id) ? messageData : message;
       })
     );
-    // history.push("/");
   };
 
   const handleDelete = async (id) => {
@@ -78,9 +77,8 @@ export default function MainContainer({ currentUser }) {
         <Users
           listOfUsers={listOfUsers}
           currentUser={currentUser}
+          setCurrentUser={setCurrentUser}
           handleCreateRoom={handleCreateRoom}
-          // handleAppear={handleAppear}
-          // toggle={toggle}
         />
       </Route>
 
@@ -89,12 +87,10 @@ export default function MainContainer({ currentUser }) {
           listOfMessages={listOfMessages}
           fetchMessages={fetchMessages}
           currentUser={currentUser}
-          handleUpdate={handleUpdate}
+          setCurrentUser={setCurrentUser}
           handleDelete={handleDelete}
           handleCreate={handleCreate}
           handleUpdate={handleUpdate}
-          // handleAppear={handleAppear}
-          // toggle={toggle}
         />
       </Route>
 
@@ -102,8 +98,7 @@ export default function MainContainer({ currentUser }) {
         <Rooms
           listOfRooms={listOfRooms}
           currentUser={currentUser}
-          // handleAppear={handleAppear}
-          // toggle={toggle}
+          setCurrentUser={setCurrentUser}
         />
       </Route>
 
