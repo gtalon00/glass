@@ -23,26 +23,27 @@
   width: 100%;
   height: 300px;
   justify-self: flex-end;
-  z-index: 6;
   transform: translateY(495px);
   transition: 0.15s ease-in-out;
 }
 .bsn-revealed {
   transform: translateY(256px);
+  z-index: 6;
   /* transform: translateY(400px); */
 }
 
 .bkgrnd {
   position: absolute;
-  z-index: 4;
+  z-index: -1;
   width: 100%;
-  height: 100%;
+  height: 812px;
   background-color: rgb(60, 65, 92, 0.92);
   transform: translateY(-2000px);
 }
 
 .bkgrnd-revealed {
-  transform: translateY(0);
+  transform: translateY(-770px);
+  z-index: -9;
 }
 
 .bsn-top {

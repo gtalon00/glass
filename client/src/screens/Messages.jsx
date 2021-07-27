@@ -28,7 +28,7 @@ export default function Messages({
     }));
   };
 
-  const handleRevealEdit = async () => {
+  const handleToggleEdit = async () => {
     toggleEdit ? setToggleEdit(false) : setToggleEdit(true);
   };
 
@@ -40,7 +40,7 @@ export default function Messages({
 
   return (
     <div className="msg-parent">
-      {/* <div className="bkgrnd-revealed"></div> */}
+      {/* <div className="bkgrnd bkgrnd-revealed"></div> */}
       <div className="msg-glass-card">
         <div className="msg-gap"></div>
         <div className="msg-list">
@@ -66,7 +66,7 @@ export default function Messages({
                           <div className="msg-edit-logo-conditional">
                             <FiEdit3
                               className="msg-edit-logo edit"
-                              onClick={handleRevealEdit}
+                              onClick={handleToggleEdit}
                             />
                             <AiOutlineDelete
                               className="msg-edit-logo delete"
@@ -95,14 +95,14 @@ export default function Messages({
                           {/* Edit */}
                           <input
                             className="msg-input"
-                            placeholder="context"
+                            // placeholder="context"
                             type="text"
                             name="context"
                             value={message?.context}
                             onChange={handleChange}
                           />
                         </label>
-                        <button>Edit</button>
+                        <button onClick={handleToggleEdit}>Edit</button>
                       </form>
                     ) : (
                       <p className="msg-context">{message?.context}</p>
