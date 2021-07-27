@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  before_action :authorize_request, only: :index
+  before_action :authorize_request, only: [:index, :create]
 
   # GET /rooms
   def index
@@ -17,10 +17,12 @@ class RoomsController < ApplicationController
 
   # POST /rooms
   def create
-    @room = Room.new(room_params)
+    @room = Room.new
+    @second_user = User.find(params[:user_id])
     
     if @room.save
-      render json: @room, status: :created
+      @room.users = [@second_user, @current_user]
+      render json: @room,  include: :users, status: :created 
     else
       render json: @room.errors, status: :unprocessable_entity
     end

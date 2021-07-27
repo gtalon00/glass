@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :rooms, except: [:show, :update]
+  post '/rooms/:user_id', to: 'rooms#create'
   # get '/user/:user_id/rooms'
   resources :messages, except: [:index, :create, :show]
   get '/rooms/:room_id/messages', to: 'messages#index'
