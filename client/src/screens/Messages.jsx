@@ -57,7 +57,7 @@ export default function Messages({
         </div>
       </div>
       <div className='bsn-placholder'></div>
-      <BottomSlideNav />
+      <BottomSlideNav currentUser={currentUser}/>
     </div>
   )
 }
