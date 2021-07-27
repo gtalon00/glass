@@ -105,7 +105,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  width: 70px;
+  height: 70px;
 }
 
 .rooms-instance-chat-detail {
