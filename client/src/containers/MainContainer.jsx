@@ -37,7 +37,7 @@ export default function MainContainer({currentUser}) {
     const messageData = await getAllMessages(id);
     setListOfMessages(messageData);
   };
-  console.log(currentUser)
+  
   const handleCreate = async (id, formData) => {
     console.log(id)
     console.log(formData)
