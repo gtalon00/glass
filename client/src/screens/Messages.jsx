@@ -6,6 +6,7 @@ import BottomSlideNav from "../components/BottomSlideNav";
 import MessageEdit from "../components/MessgeEdit";
 import { FiEdit3 } from "react-icons/fi";
 import { AiOutlineDelete } from "react-icons/ai";
+import LeftSideNav from "../components/LeftSideNav";
 
 export default function Messages({
   listOfMessages,
@@ -32,6 +33,8 @@ export default function Messages({
 
   return (
     <div className="msg-parent">
+      <div className="msg-glass-card-nav-container"></div>
+      <LeftSideNav currentUser={currentUser} setCurrentUser={setCurrentUser} />
       {/* <div className="bkgrnd bkgrnd-revealed"></div> */}
       <div className="msg-glass-card">
         <div className="msg-gap"></div>

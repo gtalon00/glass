@@ -23,3 +23,16 @@
   margin: 2% 0% 2% 2%;
   border-radius: 55px;
 }
+
+@media screen and (min-width: 760px) {
+  /* .msg-edit-input {
+    height: 60px;
+    border: none;
+    border-bottom: 0.5px solid white;
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 4%;
+    width: 280px;
+    color: white;
+    font-size: 0.1rem;
+  } */
+}

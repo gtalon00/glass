@@ -132,13 +132,6 @@
     align-items: center;
   }
 
-  .userss-glass-card-nav-container {
-    background-color: rgb(234, 236, 236);
-    display: flex;
-    width: 100%;
-    height: 100%;
-  }
-
   .users-glass-card {
     margin-left: 260px;
     width: 2760px;
