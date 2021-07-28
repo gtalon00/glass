@@ -1,5 +1,4 @@
 .mc-parent {
-  /* background-color: rgba(234, 234, 234, 0.724); */
   background-image: linear-gradient(
     140deg,
     rgba(255, 255, 255, 0.71) 0%,
@@ -17,7 +16,6 @@
 }
 
 .mc-form {
-  /* background-color: cadetblue; */
   height: 100%;
   width: 75%;
   padding: 0;
@@ -27,8 +25,6 @@
 }
 
 .mc-input {
-  /* margin: auto 0; */
-  /* background-color: yellowgreen; */
   background-color: rgba(255, 255, 255, 0);
   background-image: linear-gradient(
     40deg,
@@ -41,10 +37,8 @@
   );
   height: 35px;
   border: 0px;
-  /* width: 90%; */
   border-radius: 55px 0 0 55px;
   padding-left: 19px;
-  /* color: white; */
 }
 
 ::placeholder {
@@ -53,14 +47,6 @@
 
 .mc-btn {
   background-color: rgba(255, 255, 255, 0.9);
-  /* background-image: 
-  linear-gradient(140deg, 
-  rgba(255, 255, 255, .71) 0%,  
-  rgba(255, 255, 255, .38) 20%,  
-  rgba(255, 255, 255, .30) 40%,  
-  rgba(255, 255, 255, .29) 60%,  
-  rgba(255, 255, 255, .36) 80%,  
-  rgba(255, 255, 255, .51) 100%); */
   font-size: 0.7rem;
   display: flex;
   justify-content: center;
