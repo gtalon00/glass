@@ -28,11 +28,12 @@ export default function Users({
                 <div className="users-profile-card-top">
                   <img
                     className="users-profile-img"
-                    src={
-                      user.profile_pic
-                        ? user.profile_pic
-                        : "../assets/images/standardimg.jpg"
-                    }
+                    src="https://i.imgur.com/rZOVQuh.jpg"
+                    // {
+                    //   user.profile_pic
+                    //     ? user.profile_pic
+                    //     : "../assets/images/standardimg.jpg"
+                    // }
                     alt="Profle"
                   />
 
