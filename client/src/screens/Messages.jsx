@@ -47,7 +47,11 @@ export default function Messages({
                     <div className="msg-user-img-container">
                       <img
                         className="msg-user-pic"
-                        src={message?.user?.profile_pic}
+                        src={
+                          message?.user?.profile_pic
+                            ? message?.user?.profile_pic
+                            : "https://i.imgur.com/rZOVQuh.jpg"
+                        }
                         alt=""
                       />
                     </div>
