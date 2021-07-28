@@ -39,7 +39,11 @@ export default function Rooms({ listOfRooms, currentUser, setCurrentUser }) {
                 <div className="rooms-instance-img">
                   <img
                     className="rooms-profile-img"
-                    src={chat?.user?.profile_pic}
+                    src={
+                      chat?.user?.profile_pic
+                        ? chat?.user?.profile_pic
+                        : "https://i.imgur.com/rZOVQuh.jpg"
+                    }
                     alt={chat?.user?.username}
                   />
                 </div>
