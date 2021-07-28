@@ -35,7 +35,7 @@ export default function Rooms({ listOfRooms, currentUser, setCurrentUser }) {
         <div className="rooms-list">
           {chatList.map((chat) => (
             <div className="rooms-instance" key={chat.id}>
-              <Link to={`/rooms/${chat.id}/messages`}>
+              <Link className="rooms-link" to={`/rooms/${chat.id}/messages`}>
                 <div className="rooms-instance-img">
                   <img
                     className="rooms-profile-img"

@@ -91,6 +91,7 @@
   border-radius: 55px;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+  /* background: coral; */
 }
 
 .rooms-instance a {
@@ -148,6 +149,11 @@
   /* background-color: blueviolet; */
 }
 
+.main {
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (min-width: 760px) {
   .rooms-parent {
     background-color: #3c415cf1;
@@ -177,9 +183,16 @@
     height: 90%;
     overflow-y: scroll;
   }
-}
 
-.main {
-  display: flex;
-  justify-content: center;
+  .rooms-instance a {
+    align-items: center;
+  }
+
+  .rooms-profile-img {
+    border-radius: 50px;
+    width: 56px;
+    height: 56px;
+    box-shadow: 2px 2px 8px rgb(0, 0, 0, 0.5);
+    border: 2px solid white;
+  }
 }
