@@ -23,7 +23,6 @@ export default function BottomSlideNav({ currentUser, setCurrentUser }) {
   };
   return (
     <div className={toggle ? "bsn-parent bsn-revealed" : "bsn-parent"}>
-      {/* <div className={toggle ? "bkgrnd bkgrnd-revealed" : "bkgrnd"}></div> */}
       <div className={toggle ? "bsn-top bsn-top-revealed" : "bsn-top"}>
         <div
           className={
@@ -53,7 +52,6 @@ export default function BottomSlideNav({ currentUser, setCurrentUser }) {
         <Link className="bsn-links" to="/rooms">
           <IoIosChatbubbles className="bsn-icons" />
         </Link>
-        {/* <Link className='bsn-links' to='/'><RiUserSettingsLine className='bsn-icons'/> </Link> */}
       </div>
       <div className={toggle ? "bsn-bottom bsn-bottom-revealed" : "bsn-bottom"}>
         <div className="bsn-bottom-left-detail">

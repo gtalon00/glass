@@ -35,10 +35,8 @@ export default function MessgeEdit({
       }}
     >
       <label>
-        {/* Edit */}
         <input
           className="msg-edit-input"
-          // placeholder="context"
           type="text"
           name="context"
           value={formData.context}

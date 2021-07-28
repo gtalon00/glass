@@ -35,7 +35,6 @@ export default function Messages({
     <div className="msg-parent">
       <div className="msg-glass-card-nav-container"></div>
       <LeftSideNav currentUser={currentUser} setCurrentUser={setCurrentUser} />
-      {/* <div className="bkgrnd bkgrnd-revealed"></div> */}
       <div className="msg-glass-card">
         <div className="msg-gap"></div>
         <div className="msg-list">
@@ -61,7 +60,6 @@ export default function Messages({
                           {message?.user?.username}
                         </p>
                       </div>
-                      {/* <p className='msg-user-timestamp'>{messages?.created_at}</p> */}
                       <div className="msg-edit-logo-container">
                         {currentUser.id === message?.user?.id ? (
                           <div className="msg-edit-logo-conditional">

@@ -31,13 +31,6 @@ function App() {
     history.push("/users");
   };
 
-  // const handleLogout = () => {
-  //   setCurrentUser(null);
-  //   localStorage.removeItem("authToken");
-  //   removeToken();
-  //   history.push("/");
-  // };
-
   return (
     <div className="App">
       <Layout currentUser={currentUser}>
@@ -54,7 +47,6 @@ function App() {
             <MainContainer
               currentUser={currentUser}
               setCurrentUser={setCurrentUser}
-              // handleLogout={handleLogout}
             />
           </Route>
         </Switch>

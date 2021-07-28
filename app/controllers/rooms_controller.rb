@@ -5,13 +5,6 @@ class RoomsController < ApplicationController
   def index
     @rooms = @current_user.rooms
 
-    # @rooms = Room.joins(:users).where(users: {id: @current_user.id})
-    # .joins(:users).group('rooms.id')
-    # .select('rooms.*, COUNT(users.id) as user_count').group('rooms.id')
-    #  .where(user_id: @current_user.id);
-
-    # @rooms = Room.where(user: @current_user)
-
     render json: @rooms, include: :users
   end
 
@@ -35,10 +28,6 @@ class RoomsController < ApplicationController
   end
 
   private
-    # Only allow a list of trusted parameters through.
-    # def set_user 
-    #   @user = 
-    # end
 
     def room_params
       params.fetch(:room, {})

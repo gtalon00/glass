@@ -5,11 +5,6 @@ export const getAllUsers = async () => {
   return resp.data;
 };
 
-// export const create = async () => {
-//   const resp = await api.(`/`)
-//   return resp.data
-// }
-
 export const updateUser = async (id, userData) => {
   const resp = await api.put(`/users/${id}`, userData);
   return resp.data;
