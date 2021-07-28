@@ -192,3 +192,9 @@
     border: 2px solid white;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .rooms-glass-card {
+    margin-left: 240px;
+  }
+}
