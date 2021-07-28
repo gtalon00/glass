@@ -97,7 +97,7 @@ src
 ## Code Showcase
 
 ````
->{  {currentUser.id === message?.user?.id ? (
+{  {currentUser.id === message?.user?.id ? (
 
                          <div className="msg-edit-logo-conditional">
                            <FiEdit3
