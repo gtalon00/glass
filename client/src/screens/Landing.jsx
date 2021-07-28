@@ -5,6 +5,11 @@ import "../assets/CSS/Landing.css";
 export default function Landing() {
   return (
     <div className="landing-parent">
+      <img
+        className="landing-glass-img"
+        src="https://i.imgur.com/PKKF4Lj.png"
+        alt="glass background text"
+      />
       <div className="landing-glass-card">
         <div className="landing-text">
           <h2 className="landing-intro landing-making">Making</h2>

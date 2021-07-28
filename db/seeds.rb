@@ -18,7 +18,7 @@ puts "#{User.count} user(s) created"
 puts "#{Room.count} room(s) created"
 
 @message_1 = Message.create!(context: 'Hey Maggie, are you bringing the soup?', user: @donny, room: @room_one)
-@message_2 = Message.create!(context: 'No Donny, the picnic was cancled I told you this last Tuesday.', user: @maggie, room: @room_one)
+@message_2 = Message.create!(context: 'No Donny, the picnic was canceled I told you this last Tuesday.', user: @maggie, room: @room_one)
 @message_3 = Message.create!(context: "I didn't know you meant this picnic, calm down.", user: @donny, room: @room_one)
 
 puts "#{Message.count} message(s) created"
