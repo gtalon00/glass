@@ -100,6 +100,8 @@
   border: 0px;
   border-top: 0.5px solid rgba(255, 255, 255, 0.5);
   border-left: 0.5px solid rgba(255, 255, 255, 0.5);
+  padding-left: 15px;
+  color: rgb(80, 80, 80);
 }
 
 .login-redirect-container {
