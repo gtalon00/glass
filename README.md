@@ -126,5 +126,8 @@ src
                    )}
                    ```
 
+```
+
 This is where I conditionally rendered the edit functionality for the messages. If it's the users message, then the icons for edit and delete will appear. There is also conditional rendering to make it so when you select the message; instead of just having the edit pop up for every message the belongs to the current user, it will show up for the specific message you select.
+
 ````
