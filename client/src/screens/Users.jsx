@@ -1,6 +1,7 @@
 import React from "react";
 import BottomSlideNav from "../components/BottomSlideNav";
 import "../assets/CSS/Users.css";
+import LeftSideNav from "../components/LeftSideNav";
 
 export default function Users({
   listOfUsers,
@@ -10,6 +11,8 @@ export default function Users({
 }) {
   return (
     <div className="users-parent">
+      <div className="users-glass-card-nav-container"></div>
+      <LeftSideNav currentUser={currentUser} setCurrentUser={setCurrentUser} />
       <div className="users-glass-card">
         <div className="users-contact-header-container">
           <h3>Contact Someone New:</h3>

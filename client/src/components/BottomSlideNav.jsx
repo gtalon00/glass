@@ -47,7 +47,7 @@ export default function BottomSlideNav({ currentUser, setCurrentUser }) {
           <RiUserSearchLine className="bsn-icons" />
         </Link>
         <Link className="bsn-links" to="/rooms">
-          <IoIosChatbubbles className="bsn-icons" />{" "}
+          <IoIosChatbubbles className="bsn-icons" />
         </Link>
         {/* <Link className='bsn-links' to='/'><RiUserSettingsLine className='bsn-icons'/> </Link> */}
       </div>
@@ -62,7 +62,7 @@ export default function BottomSlideNav({ currentUser, setCurrentUser }) {
           <h3 className="bsn-bottom-right-email bottom-txt">
             {currentUser?.email}
           </h3>
-          <button className="bsn-bottom-btn" onClick={handleLogout}>
+          <button className="log-out-btn" onClick={handleLogout}>
             Log Out
           </button>
         </div>
