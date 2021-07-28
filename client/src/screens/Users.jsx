@@ -28,7 +28,11 @@ export default function Users({
                 <div className="users-profile-card-top">
                   <img
                     className="users-profile-img"
-                    src={user.profile_pic}
+                    src={
+                      user.profile_pic
+                        ? user.profile_pic
+                        : "../assets/images/standardimg.jpg"
+                    }
                     alt="Profle"
                   />
 
