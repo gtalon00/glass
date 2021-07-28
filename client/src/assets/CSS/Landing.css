@@ -70,18 +70,11 @@
   margin-top: -20px;
 }
 
-.landing-communication {
+.landing-communication-clearerclearer {
   /* font-size: 2.3rem; */
-  font-weight: 50;
+  /* font-weight: 50;
   font-size: 43px;
-  margin-top: -5px;
-}
-
-.landing-clearer {
-  /* font-size: 2.3rem; */
-  font-weight: 50;
-  font-size: 43px;
-  margin-top: -10px;
+  margin-top: -10px; */
 }
 
 .landing-links {
@@ -160,12 +153,19 @@
   .landing-clear {
     font-weight: 100;
     font-size: 130px;
-    margin-top: -20px;
+    margin-top: -35px;
   }
 
-  .landing-communication {
+  .landing-communication-clearer {
+    padding-top: 4%;
     font-weight: 50;
     font-size: 43px;
-    margin-top: -5px;
+  }
+
+  .landing-links {
+    /* background-color: black; */
+    width: 40%;
+    flex-flow: row;
+    justify-content: space-evenly;
   }
 }
