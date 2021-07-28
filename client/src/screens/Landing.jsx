@@ -8,12 +8,12 @@ export default function Landing() {
       <div className="landing-glass-card">
         {/* <h1 className='landing-background-text'>Glass</h1> */}
         <div className="landing-text">
-          {" "}
           {/* one double stack for text, the other as one line below it */}
           <h2 className="landing-intro landing-making">Making</h2>
           <h2 className="landing-intro landing-clear">Clear</h2>
-          <h2 className="landing-intro landing-communication">Communication</h2>
-          <h2 className="landing-intro landing-clearer">Clearer</h2>
+          <h2 className="landing-intro landing-communication-clearer">
+            Communication Clearer
+          </h2>
         </div>
         <div className="landing-links">
           <Link to="/register">
