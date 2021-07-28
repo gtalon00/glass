@@ -27,7 +27,6 @@ export default function Rooms({ listOfRooms, currentUser, setCurrentUser }) {
     <div className="rooms-parent">
       <div className="rooms-glass-card-nav-container"></div>
       <LeftSideNav currentUser={currentUser} setCurrentUser={setCurrentUser} />
-      {/* <div className="rooms-left-nav">render 2</div> */}
       <div className="rooms-glass-card">
         <div className="rooms-contact-header-container">
           <h3>Messages</h3>

@@ -36,7 +36,11 @@ export default function BottomSlideNav({ currentUser, setCurrentUser }) {
             className={
               toggle ? "bsn-top-img bsn-top-img-revealed" : "bsn-top-img"
             }
-            src={currentUser?.profile_pic}
+            src={
+              currentUser?.profile_pic
+                ? currentUser?.profile_pic
+                : "https://i.imgur.com/rZOVQuh.jpg"
+            }
             onClick={handleAppear}
             alt={`${currentUser?.username}'s profile`}
           />

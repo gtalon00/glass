@@ -20,7 +20,11 @@ export default function LeftSideNav({ currentUser, setCurrentUser }) {
       <div className="lsn-top">
         <img
           className="lsn-profile-pic"
-          src={currentUser?.profile_pic}
+          src={
+            currentUser?.profile_pic
+              ? currentUser?.profile_pic
+              : "https://i.imgur.com/rZOVQuh.jpg"
+          }
           alt={`${currentUser?.username}'s profile`}
         />
         <hr className="lsn-hr-top" />
