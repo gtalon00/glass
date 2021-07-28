@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import BottomSlideNav from "../components/BottomSlideNav";
+import LeftSideNav from "../components/LeftSideNav";
 import "../assets/CSS/Rooms.css";
 
 export default function Rooms({ listOfRooms, currentUser, setCurrentUser }) {
@@ -24,6 +25,9 @@ export default function Rooms({ listOfRooms, currentUser, setCurrentUser }) {
 
   return (
     <div className="rooms-parent">
+      <div className="rooms-glass-card-nav-container"></div>
+      <LeftSideNav />
+      {/* <div className="rooms-left-nav">render 2</div> */}
       <div className="rooms-glass-card">
         <div className="rooms-contact-header-container">
           <h3>Messages</h3>

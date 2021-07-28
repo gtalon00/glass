@@ -159,5 +159,8 @@
   font-size: 0.9rem;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 760px) {
+  .bsn-parent {
+    display: none;
+  }
 }

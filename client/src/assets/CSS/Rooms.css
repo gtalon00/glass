@@ -149,4 +149,37 @@
 }
 
 @media screen and (min-width: 760px) {
+  .rooms-parent {
+    background-color: #3c415cf1;
+    height: 812px;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rooms-parent {
+    height: 1024px;
+  }
+
+  .rooms-glass-card-nav-container {
+    /* background-color: rgb(234, 236, 236); */
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .rooms-glass-card {
+    margin-left: 100px;
+    width: 2600px;
+    /* width: 100%; */
+    height: 90%;
+    overflow-y: scroll;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
 }
