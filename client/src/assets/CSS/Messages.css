@@ -175,3 +175,10 @@
     overflow-y: scroll;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .msg-glass-card {
+    margin-left: 420px;
+    width: 3900px;
+  }
+}
