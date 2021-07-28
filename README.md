@@ -1,7 +1,9 @@
 # glass
+
 <br>
 
 ## MVP / What is Glass
+
 Glass is an megassing application where you can search for and connect with other users to chat with. Have multiple chat rooms with different users with appeasing visuals and clean functionality. Be able to set a profile picture, look at your list of contacts, and view your current messages. With Glass you can edit and delete any sent messages, typos and mis-clicking be annoying so let's make them an ease to fix!
 <br>
 
@@ -9,19 +11,16 @@ Glass is an megassing application where you can search for and connect with othe
 
 - _Glassy look to the application._
 - _Easy to navigate UI._
-- _._
-- _._
-- _._
 
 <br>
 
 ### Libraries and Dependencies
 
-|     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|      React       | _JavaScript library for building user interfaces._ |
-|   React Router   | _It enables the navigation among views of various components in a React Application._ |
-|   Axios   | _Making and Exicuting HTTP request._ |
+|   Library    | Description                                                                           |
+| :----------: | :------------------------------------------------------------------------------------ |
+|    React     | _JavaScript library for building user interfaces._                                    |
+| React Router | _It enables the navigation among views of various components in a React Application._ |
+|    Axios     | _Making and Exicuting HTTP request._                                                  |
 
 <br>
 
@@ -32,7 +31,8 @@ Glass is an megassing application where you can search for and connect with othe
 [Component Tree](https://whimsical.com/glass-tree-WpDcwsFnGZh16xJhu1Sy5y)
 
 ### File Structure
-``` structure
+
+```structure
 
 src
 |__ screens/
@@ -53,29 +53,28 @@ src
 
 #### Time Estimates
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Proposal    |    L     |     1.5 hrs      |     TBD     |    3 hrs    |
-| Pseudo Code |    H     |     .5 hrs      |     TBD     |     TBD     |
-| Back End |    H     |     4.5 hrs      |     TBD     |     TBD     |
-| Create React App |    H     |     .5 hrs      |     TBD     |     TBD     |
-| Room.jsx Functionality |    H     |     3 hrs      |     TBD     |     TBD     |
-| Message.jsx Functionality|    H     |     3 hrs      |     TBD     |     TBD     |
-| Register.jsx Functionality|    H     |     3 hrs      |     TBD     |     TBD     |
-| LogIn.jsx Functionality|    H     |     3 hrs      |     TBD     |     TBD     |
-| Landing.jsx Functionality|    H     |     3 hrs      |     TBD     |     TBD     |
-| UserSettings.jsx Functionality|    H     |     3 hrs      |     TBD     |     TBD     |
-| Users.jsx Functionality|    H     |     3 hrs      |     TBD     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     TBD    |     TBD     |
-| CSS Login-In |    H     |     4 hrs      |     TBD     |     TBD     |
-| CSS Register |    H     |     4 hrs      |     TBD     |     TBD     |
-| CSS Chat Room |    H     |     4 hrs      |     TBD     |     TBD     |
-| CSS Chat List |    H     |     4 hrs      |     TBD     |     TBD     |
-| CSS Contact List |    H     |     4 hrs      |     TBD     |     TBD     |
-| CSS Account Settings |    H     |     4 hrs      |     TBD     |     TBD     |
-| CSS Landing |    H     |     4 hrs      |     TBD     |     TBD     |
-| TOTAL               |          |     28 hrs      |     TBD     |     TBD     |
-
+| Task                           | Priority | Estimated Time | Time Invested |
+| ------------------------------ | :------: | :------------: | :-----------: |
+| Proposal                       |    L     |    1.5 hrs     |    1.5 hrs    |
+| Pseudo Code                    |    H     |     .5 hrs     |    .5 hrs     |
+| Back End                       |    H     |    4.5 hrs     |     6 hrs     |
+| Create React App               |    H     |     .5 hrs     |    .5 hrs     |
+| Room.jsx Functionality         |    H     |     3 hrs      |     3 hrs     |
+| Message.jsx Functionality      |    H     |     3 hrs      |     3 hrs     |
+| Register.jsx Functionality     |    H     |     3 hrs      |     2 hrs     |
+| LogIn.jsx Functionality        |    H     |     3 hrs      |     2 hrs     |
+| Landing.jsx Functionality      |    H     |     3 hrs      |     2 hrs     |
+| UserSettings.jsx Functionality |    H     |     3 hrs      |    .5 hrs     |
+| Users.jsx Functionality        |    H     |     3 hrs      |    3.5 hrs    |
+| Create CRUD Actions            |    H     |     3 hrs      |     4 hrs     |
+| CSS Login-In                   |    H     |     4 hrs      |     4 hrs     |
+| CSS Register                   |    H     |     4 hrs      |     4 hrs     |
+| CSS Chat Room                  |    H     |     4 hrs      |     4 hrs     |
+| CSS Chat List                  |    H     |     4 hrs      |     4 hrs     |
+| CSS Contact List               |    H     |     4 hrs      |     4 hrs     |
+| CSS Account Settings           |    H     |     4 hrs      |     4 hrs     |
+| CSS Landing                    |    H     |     4 hrs      |     3 hrs     |
+| TOTAL                          |          |     28 hrs     |   55.5 hrs    |
 
 <br>
 
@@ -84,7 +83,7 @@ src
 [ERD](https://app.diagrams.net/)
 <br>
 
-***
+---
 
 ## Post-MVP
 
@@ -93,12 +92,37 @@ src
 - _User Bio._
 - _Group Chats._
 
-***
+---
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+> ```
+> {  {currentUser.id === message?.user?.id ? (
+> ```
 
-## Code Issues & Resolutions
+                          <div className="msg-edit-logo-conditional">
+                            <FiEdit3
+                              className="msg-edit-logo edit"
+                              onClick={() => handleToggleEdit(message.id)}
+                            />
+                            <AiOutlineDelete
+                              className="msg-edit-logo delete"
+                              onClick={() => handleDelete(message.id)}
+                            />
+                          </div>
+                        ) : (
+                          ""
+                        )}
 
-> Use this section to list of all major issues encountered and their resolution.
+                <div className="msg-context-parent">
+                  <div className="msg-context-container">
+                    {toggleEdit === message.id ? (
+                      <MessageEdit
+                        message={message}
+                        handleUpdate={handleUpdate}
+                        handleToggleEdit={handleToggleEdit}
+                      />
+                    ) : (
+                      <p className="msg-context">{message?.context}</p>
+                    )}
+                    ```
