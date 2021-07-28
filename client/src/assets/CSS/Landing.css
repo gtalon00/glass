@@ -133,8 +133,6 @@
     rgba(255, 255, 255, 0.51) 100%
   );
   color: white;
-  /* position: absolute;
-    top: 80%; */
 }
 
 @media screen and (min-width: 760px) {
@@ -150,5 +148,24 @@
     /* width: 100%; */
     height: 90%;
     overflow-y: scroll;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .landing-making {
+    font-weight: 80;
+    font-size: 150px;
+  }
+
+  .landing-clear {
+    font-weight: 100;
+    font-size: 130px;
+    margin-top: -20px;
+  }
+
+  .landing-communication {
+    font-weight: 50;
+    font-size: 43px;
+    margin-top: -5px;
   }
 }
