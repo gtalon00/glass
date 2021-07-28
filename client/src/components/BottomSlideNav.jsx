@@ -25,7 +25,13 @@ export default function BottomSlideNav({ currentUser, setCurrentUser }) {
     <div className={toggle ? "bsn-parent bsn-revealed" : "bsn-parent"}>
       {/* <div className={toggle ? "bkgrnd bkgrnd-revealed" : "bkgrnd"}></div> */}
       <div className={toggle ? "bsn-top bsn-top-revealed" : "bsn-top"}>
-        <div className="bsn-top-img-container">
+        <div
+          className={
+            toggle
+              ? "bsn-top-img-container bsn-top-img-container-revealed"
+              : "bsn-top-img-container"
+          }
+        >
           <img
             className={
               toggle ? "bsn-top-img bsn-top-img-revealed" : "bsn-top-img"

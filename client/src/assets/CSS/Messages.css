@@ -132,6 +132,8 @@
   width: 90%;
   min-height: 45.781px;
   border-radius: 0 55px 55px 55px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .msg-context {
@@ -144,6 +146,8 @@
   border-radius: 50px;
   width: 40px;
   height: 40px;
+  box-shadow: 2px 2px 8px rgb(0, 0, 0, 0.5);
+  border: 2px solid white;
 }
 
 .msg-input-container {

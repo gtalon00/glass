@@ -89,6 +89,8 @@
   height: 10.5%;
   margin: 1.25% 0 1.25% 0;
   border-radius: 55px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .rooms-instance a {
@@ -113,7 +115,6 @@
   display: flex;
   flex-flow: column;
   padding-top: 2.3%;
-  /* justify-content: center; */
   width: 75%;
 }
 
@@ -138,6 +139,7 @@
   border-radius: 50px;
   width: 80%;
   box-shadow: 2px 2px 8px rgb(0, 0, 0, 0.5);
+  border: 2px solid white;
 }
 
 .bsn-placholder {
@@ -147,23 +149,4 @@
 }
 
 @media screen and (min-width: 760px) {
-  .rooms-parent {
-    background-color: #3c415cf1;
-    height: 1024px;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .rooms-glass-card {
-    /* background-color: wheat; */
-    width: 60%;
-    height: 80%;
-  }
-
-  .bsn-placholder {
-    width: 20%;
-    height: 8%;
-    /* background-color: blueviolet; */
-  }
 }
