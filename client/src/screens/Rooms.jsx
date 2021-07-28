@@ -51,7 +51,8 @@ export default function Rooms({ listOfRooms, currentUser, setCurrentUser }) {
                     <p className="rooms-username">{chat?.user?.username}</p>
                   </div>
                   <div className="rooms-instance-time">
-                    <p className="rooms-timestamp">Last messaged: 12:47pm</p>
+                    {/* <p className="rooms-timestamp">Last messaged: Am</p> */}{" "}
+                    {/*feature to add */}
                   </div>
                 </div>
               </Link>

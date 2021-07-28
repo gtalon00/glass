@@ -40,14 +40,15 @@
   border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.landing-background-text {
+/* .landing-background-text {
   overflow: hidden;
   font-size: 20rem;
   position: absolute;
   top: 20;
   left: 20;
   z-index: -2;
-}
+} */
+/* ^^will put this in, still working on it. */
 
 .landing-text {
   height: 75%;
