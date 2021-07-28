@@ -96,35 +96,35 @@ src
 
 ## Code Showcase
 
-> ```
-> {  {currentUser.id === message?.user?.id ? (
-> ```
+````
+>{  {currentUser.id === message?.user?.id ? (
 
-                          <div className="msg-edit-logo-conditional">
-                            <FiEdit3
-                              className="msg-edit-logo edit"
-                              onClick={() => handleToggleEdit(message.id)}
-                            />
-                            <AiOutlineDelete
-                              className="msg-edit-logo delete"
-                              onClick={() => handleDelete(message.id)}
-                            />
-                          </div>
-                        ) : (
-                          ""
-                        )}
+                         <div className="msg-edit-logo-conditional">
+                           <FiEdit3
+                             className="msg-edit-logo edit"
+                             onClick={() => handleToggleEdit(message.id)}
+                           />
+                           <AiOutlineDelete
+                             className="msg-edit-logo delete"
+                             onClick={() => handleDelete(message.id)}
+                           />
+                         </div>
+                       ) : (
+                         ""
+                       )}
 
-                <div className="msg-context-parent">
-                  <div className="msg-context-container">
-                    {toggleEdit === message.id ? (
-                      <MessageEdit
-                        message={message}
-                        handleUpdate={handleUpdate}
-                        handleToggleEdit={handleToggleEdit}
-                      />
-                    ) : (
-                      <p className="msg-context">{message?.context}</p>
-                    )}
-                    ```
+               <div className="msg-context-parent">
+                 <div className="msg-context-container">
+                   {toggleEdit === message.id ? (
+                     <MessageEdit
+                       message={message}
+                       handleUpdate={handleUpdate}
+                       handleToggleEdit={handleToggleEdit}
+                     />
+                   ) : (
+                     <p className="msg-context">{message?.context}</p>
+                   )}
+                   ```
 
 This is where I conditionally rendered the edit functionality for the messages. If it's the users message, then the icons for edit and delete will appear. There is also conditional rendering to make it so when you select the message; instead of just having the edit pop up for every message the belongs to the current user, it will show up for the specific message you select.
+````
