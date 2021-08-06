@@ -1,6 +1,6 @@
 # glass
 
-[Deployed](https://glass-clear-communication.netlify.app/)
+[Deployed Site](https://glass-clear-communication.netlify.app/)
 
 <br>
 
