@@ -28,6 +28,7 @@
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+  margin: 0px;
 }
 
 .users-glass-card::-webkit-scrollbar {
@@ -108,26 +109,9 @@
 }
 
 @media screen and (min-width: 760px) {
-  .users-parent {
-    background-color: #3c415cf1;
-    height: 1024px;
-    width: 100%;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .users-glass-card {
-    margin-left: 260px;
-    width: 4010px;
-    height: 90%;
-    overflow-y: scroll;
-  }
 }
-
 @media screen and (min-width: 1200px) {
   .users-glass-card {
-    margin-left: 410px;
+    margin: 0px;
   }
 }
