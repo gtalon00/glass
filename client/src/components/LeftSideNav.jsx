@@ -28,10 +28,12 @@ export default function LeftSideNav({ currentUser, setCurrentUser }) {
           alt={`${currentUser?.username}'s profile`}
         />
         <hr className="lsn-hr-top" />
-        <h3 className="lsn-username">{currentUser?.username}</h3>
         <h3 className="lsn-email">{currentUser?.email}</h3>
+        <h3 className="lsn-username">
+          <i>Hello</i> {currentUser?.username}
+        </h3>
+        <hr className="lsn-hr-mid" />
       </div>
-      <hr className="lsn-hr-btm" />
       <div className="lsn-mid">
         <Link className="lsn-links" to="/users">
           <RiUserSearchLine className="bsn-icons" />

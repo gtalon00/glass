@@ -34,7 +34,13 @@ export default function Messages({
   return (
     <div className="msg-parent">
       <div className="msg-glass-card">
-        <div className="msg-glass-card-lft"></div>
+        <div className="msg-glass-card-lft">
+          <LeftSideNav
+            currentUser={currentUser}
+            setCurrentUser={setCurrentUser}
+          />
+        </div>
+
         <div className="msg-glass-card-rgt">
           {/* <div className="msg-gap"></div> */}
           <div className="msg-list">
