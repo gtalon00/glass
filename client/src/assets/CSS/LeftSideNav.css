@@ -6,6 +6,7 @@
   flex-flow: column;
   align-content: center;
   /* justify-content: center; */
+  border-radius: 55px 0px 0px 55px;
   color: white;
 }
 
