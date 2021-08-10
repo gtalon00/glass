@@ -34,8 +34,8 @@ export default function Messages({
   return (
     <div className="msg-parent">
       <div className="msg-glass-card">
-        <div className="rooms-glass-card-lft"></div>
-        <div className="rooms-glass-card-rgt">
+        <div className="msg-glass-card-lft"></div>
+        <div className="msg-glass-card-rgt">
           {/* <div className="msg-gap"></div> */}
           <div className="msg-list">
             {listOfMessages.map((message) => {
@@ -101,12 +101,12 @@ export default function Messages({
             <MessageCreate id={id} handleCreate={handleCreate} />
           </div>
         </div>
-        <div className="bsn-placholder"></div>
-        <BottomSlideNav
-          currentUser={currentUser}
-          setCurrentUser={setCurrentUser}
-        />
       </div>
+      <div className="bsn-placholder"></div>
+      <BottomSlideNav
+        currentUser={currentUser}
+        setCurrentUser={setCurrentUser}
+      />
     </div>
   );
 }
