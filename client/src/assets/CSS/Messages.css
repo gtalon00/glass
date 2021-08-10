@@ -166,3 +166,22 @@
 
 @media screen and (min-width: 650px) {
 }
+
+@media screen and (min-width: 760px) {
+  .msg-glass-card {
+    flex-flow: row;
+  }
+  .msg-glass-card-rgt {
+    height: 100%;
+    width: 80%;
+    overflow-y: scroll;
+    /* background-color: aliceblue; */
+  }
+  .msg-glass-card-lft {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    background-color: #111f28;
+    /* background-color: aqua; */
+  }
+}

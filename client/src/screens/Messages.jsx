@@ -33,79 +33,80 @@ export default function Messages({
 
   return (
     <div className="msg-parent">
-      <div className="msg-glass-card-nav-container"></div>
-      <LeftSideNav currentUser={currentUser} setCurrentUser={setCurrentUser} />
       <div className="msg-glass-card">
-        <div className="msg-gap"></div>
-        <div className="msg-list">
-          {listOfMessages.map((message) => {
-            return (
-              <div className="msg-instance" key={message?.id}>
-                <div className="msg-user-conatiner">
-                  <div className="msg-user">
-                    <div className="msg-user-img-container">
-                      <img
-                        className="msg-user-pic"
-                        src={
-                          message?.user?.profile_pic
-                            ? message?.user?.profile_pic
-                            : "https://i.imgur.com/rZOVQuh.jpg"
-                        }
-                        alt=""
-                      />
-                    </div>
-                    <div className="msg-headers">
-                      <div className="msg-user-username-container">
-                        <p className="msg-user-username">
-                          {message?.user?.username}
-                        </p>
+        <div className="rooms-glass-card-lft"></div>
+        <div className="rooms-glass-card-rgt">
+          {/* <div className="msg-gap"></div> */}
+          <div className="msg-list">
+            {listOfMessages.map((message) => {
+              return (
+                <div className="msg-instance" key={message?.id}>
+                  <div className="msg-user-conatiner">
+                    <div className="msg-user">
+                      <div className="msg-user-img-container">
+                        <img
+                          className="msg-user-pic"
+                          src={
+                            message?.user?.profile_pic
+                              ? message?.user?.profile_pic
+                              : "https://i.imgur.com/rZOVQuh.jpg"
+                          }
+                          alt=""
+                        />
                       </div>
-                      <div className="msg-edit-logo-container">
-                        {currentUser.id === message?.user?.id ? (
-                          <div className="msg-edit-logo-conditional">
-                            <FiEdit3
-                              className="msg-edit-logo edit"
-                              onClick={() => handleToggleEdit(message.id)}
-                            />
-                            <AiOutlineDelete
-                              className="msg-edit-logo delete"
-                              onClick={() => handleDelete(message.id)}
-                            />
-                          </div>
-                        ) : (
-                          ""
-                        )}
+                      <div className="msg-headers">
+                        <div className="msg-user-username-container">
+                          <p className="msg-user-username">
+                            {message?.user?.username}
+                          </p>
+                        </div>
+                        <div className="msg-edit-logo-container">
+                          {currentUser.id === message?.user?.id ? (
+                            <div className="msg-edit-logo-conditional">
+                              <FiEdit3
+                                className="msg-edit-logo edit"
+                                onClick={() => handleToggleEdit(message.id)}
+                              />
+                              <AiOutlineDelete
+                                className="msg-edit-logo delete"
+                                onClick={() => handleDelete(message.id)}
+                              />
+                            </div>
+                          ) : (
+                            ""
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <br />
-                <div className="msg-context-parent">
-                  <div className="msg-context-container">
-                    {toggleEdit === message.id ? (
-                      <MessageEdit
-                        message={message}
-                        handleUpdate={handleUpdate}
-                        handleToggleEdit={handleToggleEdit}
-                      />
-                    ) : (
-                      <p className="msg-context">{message?.context}</p>
-                    )}
+                  <br />
+                  <div className="msg-context-parent">
+                    <div className="msg-context-container">
+                      {toggleEdit === message.id ? (
+                        <MessageEdit
+                          message={message}
+                          handleUpdate={handleUpdate}
+                          handleToggleEdit={handleToggleEdit}
+                        />
+                      ) : (
+                        <p className="msg-context">{message?.context}</p>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
+          <div className="msg-input-container">
+            <MessageCreate id={id} handleCreate={handleCreate} />
+          </div>
         </div>
-        <div className="msg-input-container">
-          <MessageCreate id={id} handleCreate={handleCreate} />
-        </div>
+        <div className="bsn-placholder"></div>
+        <BottomSlideNav
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUser}
+        />
       </div>
-      <div className="bsn-placholder"></div>
-      <BottomSlideNav
-        currentUser={currentUser}
-        setCurrentUser={setCurrentUser}
-      />
     </div>
   );
 }

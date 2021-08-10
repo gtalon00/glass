@@ -173,3 +173,21 @@
   .rooms-instance {
   }
 }
+@media screen and (min-width: 760px) {
+  .rooms-glass-card {
+    flex-flow: row;
+  }
+  .rooms-glass-card-rgt {
+    height: 100%;
+    width: 80%;
+    overflow-y: scroll;
+    /* background-color: aliceblue; */
+  }
+  .rooms-glass-card-lft {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    background-color: #111f28;
+    /* background-color: aqua; */
+  }
+}
