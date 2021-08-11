@@ -12,8 +12,13 @@ export default function Users({
   return (
     <div className="users-parent">
       <div className="users-glass-card">
-        <div className="user-glass-card-lft"></div>
-        <div className="user-glass-card-rgt">
+        <div className="users-glass-card-lft">
+          <LeftSideNav
+            currentUser={currentUser}
+            setCurrentUser={setCurrentUser}
+          />
+        </div>
+        <div className="users-glass-card-rgt">
           <div className="users-contact-header-container">
             <h3>Contact Someone New:</h3>
           </div>

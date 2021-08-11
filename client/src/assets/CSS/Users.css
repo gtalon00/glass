@@ -21,10 +21,10 @@
     rgba(255, 255, 255, 0.16) 80%,
     rgba(255, 255, 255, 0.31) 100%
   );
-  overflow-y: scroll;
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
+  overflow: hidden;
+  justify-content: center;
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -35,20 +35,31 @@
   display: none;
 }
 
-.users-glass-card::-webkit-scrollbar {
-  width: 0px;
+.users-glass-card-rgt {
+  /* background-color: red; */
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100%;
+  width: 90%;
 }
+
+/* .users-glass-card::-webkit-scrollbar {
+  width: 0px;
+} */
 
 .users-contact-header-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 10%;
+  max-width: 400px;
   width: 100%;
   color: white;
 }
 
 .users-list {
+  overflow-y: scroll;
   display: grid;
   justify-content: center;
   height: 83%;
@@ -56,6 +67,25 @@
   grid-gap: 2%;
   padding-bottom: 8%;
   grid-template-columns: repeat(2, 155px);
+}
+
+.users-list::-webkit-scrollbar {
+  width: 5px;
+}
+.users-list::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+.users-list::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 0.39) 0%,
+    rgba(255, 255, 255, 0.18) 20%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.09) 60%,
+    rgba(255, 255, 255, 0.16) 80%,
+    rgba(255, 255, 255, 0.31) 100%
+  );
+  border-radius: 100px;
 }
 
 .users-profile-card {
@@ -90,14 +120,14 @@
   width: 100%;
 }
 
-.users-profile-card-bottom {
+/* .users-profile-card-bottom {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0 0 40px 40px;
   height: 35%;
   width: 100%;
-}
+} */
 
 .users-profile-img {
   border-radius: 50px;
@@ -112,9 +142,20 @@
   color: white;
 }
 
+@media screen and (min-width: 525px) {
+  .users-list {
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    max-width: 400px;
+  }
+  .users-contact-header-container {
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+  }
+}
 @media screen and (min-width: 650px) {
   .users-list {
-    grid-template-columns: repeat(3, 155px);
+    /* grid-template-columns: repeat(3, 155px); */
     height: 100%;
     /* background-color: aqua; */
   }
@@ -123,13 +164,12 @@
   .users-glass-card {
     flex-flow: row;
   }
-  .user-glass-card-rgt {
+  .users-glass-card-rgt {
     height: 100%;
     width: 80%;
-    overflow-y: scroll;
     /* background-color: aliceblue; */
   }
-  .user-glass-card-lft {
+  .users-glass-card-lft {
     display: flex;
     width: 20%;
     height: 100%;
