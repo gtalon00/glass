@@ -17,33 +17,36 @@ export default function LeftSideNav({ currentUser, setCurrentUser }) {
 
   return (
     <div className="lsn-parent">
-      <div className="lsn-top">
-        <img
-          className="lsn-profile-pic"
-          src={
-            currentUser?.profile_pic
-              ? currentUser?.profile_pic
-              : "https://i.imgur.com/rZOVQuh.jpg"
-          }
-          alt={`${currentUser?.username}'s profile`}
-        />
-        <hr className="lsn-hr-top" />
-        <h3 className="lsn-email">{currentUser?.email}</h3>
-        <h3 className="lsn-username">
-          <i>Hello</i> {currentUser?.username}
-        </h3>
-        <hr className="lsn-hr-mid" />
+      <div className="lsn-container">
+        <div className="lsn-top">
+          <img
+            className="lsn-profile-pic"
+            src={
+              currentUser?.profile_pic
+                ? currentUser?.profile_pic
+                : "https://i.imgur.com/rZOVQuh.jpg"
+            }
+            alt={`${currentUser?.username}'s profile`}
+          />
+          <hr className="lsn-hr-top" />
+          <h3 className="lsn-email">{currentUser?.email}</h3>
+          <h3 className="lsn-username">
+            <i>Hello</i> {currentUser?.username}
+          </h3>
+          <hr className="lsn-hr-mid" />
+        </div>
+        <div className="lsn-mid">
+          <Link className="lsn-links" to="/users">
+            <RiUserSearchLine className="bsn-icons" />
+          </Link>
+          <Link className="lsn-links" to="/rooms">
+            <IoIosChatbubbles className="bsn-icons" />
+          </Link>
+        </div>
+        <hr className="lsn-hr-btm" />
+        {/* <div className="lsn-btm"></div> */}
       </div>
-      <div className="lsn-mid">
-        <Link className="lsn-links" to="/users">
-          <RiUserSearchLine className="bsn-icons" />
-        </Link>
-        <Link className="lsn-links" to="/rooms">
-          <IoIosChatbubbles className="bsn-icons" />
-        </Link>
-      </div>
-      <hr className="lsn-hr-btm" />
-      <div className="lsn-btm">
+      <div className="lsn-btm-gap">
         <button className="log-out-btn" onClick={handleLogout}>
           Log Out
         </button>

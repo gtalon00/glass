@@ -10,17 +10,27 @@
   color: white;
 }
 
+.lsn-container {
+  height: 100%;
+  /* background-color: red; */
+}
+
 .lsn-top {
   /* background-color: red; */
-  padding-top: 50px;
+  /* padding-top: 50px; */
+  padding-top: 33%;
+  margin-bottom: 10%;
   display: flex;
   flex-flow: column;
   align-items: center;
   width: 100%;
-  height: 155px;
+  height: 20%;
+  min-height: 161px;
 }
 
 .lsn-profile-pic {
+  border: 2px solid white;
+  box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.211);
   width: 80px;
   height: 80px;
   border-radius: 90px;
@@ -32,51 +42,63 @@
 
 .lsn-username {
   font-size: 20px;
-  padding-top: 2px;
+  padding-top: 2%;
   margin: 0px;
-  padding-bottom: 16px;
+  padding-bottom: 6%;
 }
 
 .lsn-email {
   margin: 0px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 3%;
+  padding-bottom: 3%;
   font-size: 0.8rem;
 }
 
 .lsn-hr-mid {
   width: 80px;
-  margin: 0px auto;
-}
-.lsn-hr-btm {
-  width: 80px;
-  margin: -2px auto;
+  margin: 10px auto;
 }
 
 .lsn-mid {
   /* background-color: green; */
   width: 100%;
-  height: 100px;
+  /* height: 100px; */
+  height: 12%;
+  height: 58px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   /* margin-top: 10px; */
 }
 
+.lsn-hr-btm {
+  width: 97%;
+  margin: -2px auto;
+}
+
 .lsn-links {
   color: white;
 }
 
-.lsn-btm {
-  /* background-color: yellow; */
+/* .lsn-btm {
+  height: 489px;
+  background-color: yellow;
   width: 100%;
-  /* max-height: 348px; */
-  height: 353px;
-  border-bottom: 1px solid white;
+  height: 10%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 5%;
+} */
+
+.lsn-btm-gap {
+  /* background-color: chocolate; */
+  border-top: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 73.7px;
 }
 
 @media screen and (min-width: 760px) {
