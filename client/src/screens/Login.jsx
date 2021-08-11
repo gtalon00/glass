@@ -61,7 +61,6 @@ export default function Login(props) {
             <h4 className="login-redirect-content">
               <i>Don't Have an Account?</i>
               <Link className="redirect-link" to="/register">
-                {" "}
                 Register Here
               </Link>
             </h4>

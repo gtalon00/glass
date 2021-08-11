@@ -1,6 +1,7 @@
 .register-parent {
   background-color: #3c415cf1;
   height: 812px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,6 +145,19 @@
   border-left: 0.5px solid rgba(255, 255, 255, 0.5);
 }
 
+/* BUTTON MEDIA QUERIES */
+/* BUTTON MEDIA QUERIES */
+/* BUTTON MEDIA QUERIES */
+
+@media screen and (width: 320px) {
+  .register-btn {
+    top: 82%;
+  }
+}
+/* BUTTON MEDIA QUERIES */
+/* BUTTON MEDIA QUERIES */
+/* BUTTON MEDIA QUERIES */
+
 @media screen and (min-width: 760px) {
   .register-parent {
     background-color: #3c415cf1;
@@ -163,6 +177,6 @@
   }
 
   .register-btn {
-    top: 75%;
+    top: 90%;
   }
 }
