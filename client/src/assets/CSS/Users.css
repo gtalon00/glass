@@ -1,13 +1,15 @@
 .users-parent {
   background-color: #3c415cf1;
-  height: 812px;
+  height: 100vh;
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 
 .users-glass-card {
+  margin-top: 2%;
   width: 95%;
   max-width: 1130px;
   height: 90%;
@@ -29,7 +31,6 @@
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
-  margin: 0px;
 }
 
 .user-glass-card-lft {
@@ -121,15 +122,6 @@
   width: 100%;
 }
 
-/* .users-profile-card-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0 0 40px 40px;
-  height: 35%;
-  width: 100%;
-} */
-
 .users-profile-img {
   border-radius: 50px;
   width: 65px;
@@ -162,7 +154,12 @@
   }
 }
 @media screen and (min-width: 760px) {
+  .users-parent {
+    justify-content: center;
+  }
+
   .users-glass-card {
+    margin: 0;
     flex-flow: row;
   }
   .users-glass-card-rgt {
@@ -177,7 +174,4 @@
     background-color: #111f28;
     /* background-color: aqua; */
   }
-}
-
-@media screen and (min-width: 1200px) {
 }

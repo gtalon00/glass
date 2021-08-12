@@ -66,11 +66,12 @@ export default function Rooms({ listOfRooms, currentUser, setCurrentUser }) {
           </div>
         </div>
       </div>
-      <div className="bsn-placholder"></div>
-      <BottomSlideNav
-        currentUser={currentUser}
-        setCurrentUser={setCurrentUser}
-      />
+      <div className="bsn-placholder">
+        <BottomSlideNav
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUser}
+        />
+      </div>
     </div>
   );
 }

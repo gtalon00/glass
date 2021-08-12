@@ -4,11 +4,13 @@
   /* height: 812px; */
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 
 .msg-glass-card {
+  margin-top: 2%;
   width: 95%;
   max-width: 1130px;
   height: 90%;
@@ -182,6 +184,9 @@
 }
 
 @media screen and (min-width: 760px) {
+  .msg-parent {
+    justify-content: center;
+  }
   .msg-glass-card {
     flex-flow: row;
   }
