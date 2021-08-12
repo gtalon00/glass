@@ -20,7 +20,7 @@ export default function Users({
         </div>
         <div className="users-glass-card-rgt">
           <div className="users-contact-header-container">
-            <h3>Contact Someone New:</h3>
+            <h3>Click to Contact Someone New:</h3>
           </div>
           <div className="users-list">
             {listOfUsers &&

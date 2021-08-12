@@ -113,6 +113,18 @@
   border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+.users-profile-card:hover {
+  background-image: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 0.91) 0%,
+    rgba(255, 255, 255, 0.48) 20%,
+    rgba(255, 255, 255, 0.4) 40%,
+    rgba(255, 255, 255, 0.39) 60%,
+    rgba(255, 255, 255, 0.46) 80%,
+    rgba(255, 255, 255, 0.71) 100%
+  );
+}
+
 .users-profile-card-top {
   display: flex;
   flex-flow: column;
