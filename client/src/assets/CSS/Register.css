@@ -145,6 +145,9 @@
   border-top: 0.5px solid rgba(255, 255, 255, 0.5);
   border-left: 0.5px solid rgba(255, 255, 255, 0.5);
 }
+.register-btn:hover {
+  cursor: pointer;
+}
 
 /* BUTTON MEDIA QUERIES */
 /* BUTTON MEDIA QUERIES */

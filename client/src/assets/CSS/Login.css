@@ -142,6 +142,10 @@
   border-left: 0.5px solid rgba(255, 255, 255, 0.5);
 }
 
+.login-btn:hover {
+  cursor: pointer;
+}
+
 /* BUTTON MEDIA QUERIES */
 /* BUTTON MEDIA QUERIES */
 /* BUTTON MEDIA QUERIES */
