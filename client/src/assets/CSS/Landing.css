@@ -149,7 +149,7 @@
   }
 
   .landing-links {
-    width: 40%;
+    width: 50%;
     flex-flow: row;
     justify-content: space-evenly;
   }
