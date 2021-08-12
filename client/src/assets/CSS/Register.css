@@ -162,8 +162,6 @@
 @media screen and (min-width: 760px) {
   .register-parent {
     background-color: #3c415cf1;
-    height: 1024px;
-    width: 100%;
   }
 
   .register-glass-card {
@@ -178,6 +176,6 @@
   }
 
   .register-btn {
-    top: 90%;
+    top: 75%;
   }
 }
