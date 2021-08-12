@@ -53,7 +53,8 @@
   justify-content: center;
   align-items: center;
   width: 15.5%;
-  height: 55.5%;
+  /* height: 55.5%; */
+  height: 37px;
   padding: 0;
   margin: 0px;
   border: 0px;
@@ -65,7 +66,8 @@
     height: 44px;
   }
   .mc-btn {
-    height: 69%;
+    /* height: 69%; */
+    height: 46px;
   }
   .mc-parent {
     border-radius: 0px 0px 55px 0px;

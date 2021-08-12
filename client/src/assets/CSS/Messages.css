@@ -10,6 +10,7 @@
 
 .msg-glass-card {
   width: 95%;
+  max-width: 1130px;
   height: 90%;
   box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
   border-radius: 55px;
@@ -22,7 +23,7 @@
     rgba(255, 255, 255, 0.16) 80%,
     rgba(255, 255, 255, 0.31) 100%
   );
-  /* overflow: hidden; */
+  overflow: hidden;
   display: flex;
   flex-flow: column;
   justify-content: center;
