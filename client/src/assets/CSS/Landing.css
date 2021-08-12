@@ -1,6 +1,6 @@
 .landing-parent {
   background-color: #3c415cf1;
-  height: 812px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,8 +8,9 @@
 }
 
 .landing-glass-img {
-  position: absolute;
-  width: 600px;
+  position: fixed;
+  width: 150%;
+  max-width: 1190px;
   top: 19%;
   left: -40px;
   overflow: hidden;
@@ -17,6 +18,7 @@
 
 .landing-glass-card {
   width: 95%;
+  max-width: 1130px;
   height: 98%;
   box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
   border-radius: 55px;
@@ -39,16 +41,6 @@
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
-
-/* .landing-background-text {
-  overflow: hidden;
-  font-size: 20rem;
-  position: absolute;
-  top: 20;
-  left: 20;
-  z-index: -2;
-} */
-/* ^^will put this in, still working on it. */
 
 .landing-text {
   height: 75%;
@@ -122,26 +114,19 @@
   border-left: 0.5px solid rgba(255, 255, 255, 0.5);
 }
 
-@media screen and (min-width: 760px) {
-  .landing-parent {
-    background-color: #3c415cf1;
-    height: 1024px;
-    width: 100%;
+@media screen and (min-width: 550px) {
+  .landing-glass-img {
+    top: 10%;
   }
-
-  .users-glass-card {
-    margin-left: 260px;
-    width: 2760px;
+}
+@media screen and (min-width: 760px) {
+  .landing-glass-card {
     height: 90%;
-    overflow-y: scroll;
   }
 
   .landing-glass-img {
-    position: absolute;
-    width: 820px;
-    top: 14%;
-    left: -20px;
-    overflow: hidden;
+    width: 110%;
+    top: 12%;
   }
 }
 
@@ -170,11 +155,31 @@
   }
 }
 
+@media screen and (min-width: 850px) {
+  .landing-glass-img {
+    top: 8%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .landing-glass-img {
+    width: 100%;
+    left: 3%;
+    top: 5%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .landing-glass-img {
+    left: 2%;
+  }
+}
 @media screen and (min-width: 1200px) {
   .landing-glass-img {
-    position: absolute;
-    width: 1200px;
-    top: 8%;
-    overflow: hidden;
+    left: 5%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .landing-glass-img {
+    left: 8%;
   }
 }

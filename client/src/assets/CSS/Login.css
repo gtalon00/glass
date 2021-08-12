@@ -165,7 +165,7 @@
   .login-glass-card {
     width: 507px;
     height: 70%;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
   }
 
   .login-form {

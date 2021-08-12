@@ -169,7 +169,7 @@
   .register-glass-card {
     width: 507px;
     height: 80%;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
   }
 
   .register-form {
