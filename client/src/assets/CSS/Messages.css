@@ -189,6 +189,7 @@
   }
   .msg-glass-card {
     flex-flow: row;
+    margin-top: 0;
   }
   .msg-glass-card-rgt {
     height: 100%;
